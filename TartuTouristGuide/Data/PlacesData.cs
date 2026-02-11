@@ -16,36 +16,223 @@ namespace TartuTouristGuide.Data
                 // History Category
                 new Place
                 {
-                    Id = "hotel-de-ville",
-                    Name = "Tartu Town Hall",
+                    Id = "ruines-cathedral-tartu",
+                    Name = "Ruins of Tartu Cathedral (Toomkirik)",
                     Category = "History",
-                    ShortDescription = "Iconic 18th-century Place in the heart of the main square.",
-                    FullDescription = "Tartu Town Hall, built between 1782 and 1789, is a magnificent example of classical architecture. Located on Town Hall Square, this pink Place has become the symbol of the city. It now houses reception halls and the Citizens' Museum. The tower offers a panoramic view over Tartu.",
+                    ShortDescription = "Medieval cathedral ruins from the Middle Ages, located on Toome Hill.",
+                    FullDescription = "The towers offer a panorama over Tartu and the whole ensemble is one of the city's most striking monuments.",
                     Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
-                    Hours = "Mon-Sat: 10am-6pm",
-                    Address = "Raekoja plats, 50089 Tartu"
-                },
-                new Place
-                {
-                    Id = "universite-tartu",
-                    Name = "University of Tartu",
-                    Category = "History",
-                    ShortDescription = "One of the oldest universities in Northern Europe, founded in 1632.",
-                    FullDescription = "The University of Tartu is a prestigious institution founded by King Gustavus Adolphus of Sweden. The main Place, with its neoclassical columns, is an architectural masterpiece. The university has trained many Estonian scientists and thinkers. The university museum traces its fascinating history.",
-                    Image = "https://images.unsplash.com/photo-1719667947943-ecd1c154f0c2?w=1080",
-                    Hours = "Mon-Fri: 9am-5pm",
+                    Hours = "Mon: Closed; May–Sep: Tue–Sun 10:00–18:00; Oct–Apr: Wed–Sun 11:00–17:00",
                     Address = "Ülikooli 18, 50090 Tartu"
                 },
                 new Place
                 {
-                    Id = "cathedrale-tartu",
-                    Name = "Tartu Cathedral",
+                    Id = "eglise-saint-jean",
+                    Name = "St. John's Church (Jaani kirik)",
                     Category = "History",
-                    ShortDescription = "Impressive medieval ruins on Toomemägi Hill.",
-                    FullDescription = "Tartu Cathedral, built in the 13th century, is one of the most important medieval monuments in Estonia. Although partially in ruins, it now houses the University History Museum. The restored towers offer a spectacular view of the city. Visitors can admire the Gothic architecture and discover Tartu's history through the centuries.",
-                    Image = "https://images.unsplash.com/photo-1576424784533-855d56cb3c44?w=1080",
-                    Hours = "Tue-Sun: 11am-5pm",
-                    Address = "Lossi 25, 50090 Tartu"
+                    ShortDescription = "14th-century Gothic church famous for its hundreds of unique terracotta sculptures.",
+                    FullDescription = "It has survived major fires and is a religious and architectural symbol of Tartu.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon: Closed; Jan–May: Tue–Sun 12:00–17:00; Jun–Aug: Tue–Sun 10:00–18:00; Sep–Dec: Tue–Sun 11:00–17:00",
+                    Address = "Jaani tn 5, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "musee-national-estonien",
+                    Name = "Estonian National Museum (ERM)",
+                    Category = "History",
+                    ShortDescription = "Large modern museum dedicated to Estonia's history, culture, and traditions.",
+                    FullDescription = "Interactive exhibitions cover Estonian history, minorities, and daily life in an impressive contemporary building. Closed 2026: Jun 23-24, Dec 24-26, Dec 28 & 31, Jan 1 2027.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon: Closed; Tue–Sun 10:00–18:00",
+                    Address = "Muuseumi tee 2, 60532 Tartu"
+                },
+                new Place
+                {
+                    Id = "observatoire-tartu",
+                    Name = "Tartu Observatory",
+                    Category = "History",
+                    ShortDescription = "Historic observatory linked to the University of Tartu, important for Northern European astronomy.",
+                    FullDescription = "It features ancient instruments and the history of scientific research in Tartu.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon: Closed; May–Sep: Tue–Sun 10:00–18:00; Oct–Apr: Sat–Sun 11:00–17:00",
+                    Address = "Observatooriumi tn 1, Tõravere, 61602 Tartu maakond"
+                },
+                new Place
+                {
+                    Id = "musee-chambres-kgb",
+                    Name = "KGB Cells Museum",
+                    Category = "History",
+                    ShortDescription = "Former KGB cells and offices turned into a museum on Soviet repression.",
+                    FullDescription = "Exhibitions trace arrests, interrogations, and life under the Soviet regime; recommended for adults.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon & Sun: Closed; Tue–Sat 11:00–17:00",
+                    Address = "Riia tn 15b, 51010 Tartu"
+                },
+                new Place
+                {
+                    Id = "musee-universite-tartu-arts",
+                    Name = "University of Tartu Museum and University Art Museum",
+                    Category = "History",
+                    ShortDescription = "Museum tracing the university's history and scientific research in a historic building.",
+                    FullDescription = "Features ancient instruments and exhibitions on education and science in Tartu.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Tue: Closed; Wed–Sun 11:00–17:00",
+                    Address = "Lossi 25, 51003 Tartu"
+                },
+                new Place
+                {
+                    Id = "papagoi-keskus",
+                    Name = "Papagoi Keskus (Zoo)",
+                    Category = "Entertainment",
+                    ShortDescription = "Family center with ~1-hour guided experience by owners, free-flying parrots singing or mimicking sounds.",
+                    FullDescription = "Joyful atmosphere ideal for educational visits or birthdays, with sociable animals seeking pets.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Sun 12:00–18:00 (by appointment)",
+                    Address = "Tartu mnt 80, 61709 Tartu"
+                },
+                new Place
+                {
+                    Id = "musee-arts-tartu",
+                    Name = "Tartu Art Museum",
+                    Category = "History",
+                    ShortDescription = "Main art museum in southern Estonia in Tartu's famous 'leaning house'.",
+                    FullDescription = "Founded in 1940, houses ~23,000 Estonian and international works from 18th century to today, focusing on modern and contemporary art.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Tue: Closed; Wed–Sun 11:00–18:00; Thu until 20:00",
+                    Address = "Raekoja plats 18, 51004 Tartu"
+                },
+                new Place
+                {
+                    Id = "musee-sport-tartu",
+                    Name = "Tartu Sports Museum",
+                    Category = "Entertainment",
+                    ShortDescription = "Estonian Sports and Olympism Museum, largest and modern sports museum in Baltics.",
+                    FullDescription = "Founded 1963, modernized 2020; interactive immersion in Estonian sports history, Olympics, and scandals like doping.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Sep 1–Jun 30: Wed–Sun 10:00–18:00; Jul 1–Aug 31: Mon–Sun 10:00–18:00",
+                    Address = "Rüütli tn 15, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "tartu-linnamuuseum",
+                    Name = "Tartu City Museum",
+                    Category = "History",
+                    ShortDescription = "City museum dedicated to local history from Middle Ages to today.",
+                    FullDescription = "Founded 1955 in elegant 18th-century manor; permanent 'Our Tartu' exhibition and temporary on culture, legends, daily life.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Tue: Closed; Wed–Sun 11:00–18:00",
+                    Address = "Narva mnt 23, 51009 Tartu"
+                },
+                new Place
+                {
+                    Id = "estonian-literary-museum",
+                    Name = "Estonian Literary Museum",
+                    Category = "History",
+                    ShortDescription = "Research institute on Estonian cultural history, folklore, and literary archives.",
+                    FullDescription = "Founded 1909, in historic building since 1924; holds manuscripts, photos, artifacts from 19th century, focus on literature, oral traditions, ethnography.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Thu 09:00–17:00; Fri 09:00–16:30; Weekends: Closed",
+                    Address = "Vanemuise tn 42, 51003 Tartu"
+                },
+                new Place
+                {
+                    Id = "laulupeomuuseum",
+                    Name = "Song Festival Museum (Laulupeomuuseum)",
+                    Category = "History",
+                    ShortDescription = "Museum dedicated to Estonian song festivals and Vanemuine national theater history.",
+                    FullDescription = "In 19th-century classicist building; traces first 1869 festival and national awakening role, with interactive exhibits, VR, workshops.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon & Sun: Closed; Tue–Sat 11:00–18:00",
+                    Address = "Jaama tn 14, 51009 Tartu"
+                },
+                new Place
+                {
+                    Id = "19th-century-citizens-museum",
+                    Name = "19th Century Tartu Citizen's Museum",
+                    Category = "History",
+                    ShortDescription = "Recreates 1830s bourgeois daily life in 1740s wooden house, one of Tartu's oldest surviving.",
+                    FullDescription = "Authentic Biedermeier interior with salon, dining room, office, bedroom, kitchen with period utensils and working English stove.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Tue: Closed; Wed–Sun 11:00–18:00",
+                    Address = "Jaani tn 16, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "musee-agriculture-estonie",
+                    Name = "Estonian Agriculture Museum",
+                    Category = "History",
+                    ShortDescription = "Open-air museum in Ülenurme manor, 10km south of Tartu (renamed MUHK in 2026).",
+                    FullDescription = "Traces Estonian agriculture and rural life 18th–21st centuries; ancient tools, rare Soviet machines, livestock, interactive beekeeping.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Tue: Closed; Wed–Sun 10:00–15:00",
+                    Address = "Pargi 4, Ülenurme, 61714 Tartu"
+                },
+                new Place
+                {
+                    Id = "tartu-automuuseum",
+                    Name = "Tartu Automuseum",
+                    Category = "History",
+                    ShortDescription = "Small private car museum focused on Soviet-era USSR vehicles.",
+                    FullDescription = "Restored period cars and motorcycles, civil and military; in industrial area (15min bus from center).",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "No info available",
+                    Address = "Teguri 28a, 51013 Tartu"
+                },
+                new Place
+                {
+                    Id = "museum-national-defence-college",
+                    Name = "Museum of the Estonian National Defence College",
+                    Category = "History",
+                    ShortDescription = "Military museum on Estonian defense forces and Defense League history.",
+                    FullDescription = "Founded 1994 as Defense League archives; displays weapons, medals, comms gear, ammo, pioneer equipment from 20th century Estonian army.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Thu 10:00–17:00; Fri 10:00–15:00; Weekends: Closed",
+                    Address = "51010 Tartu"
+                },
+                new Place
+                {
+                    Id = "estonian-aviation-museum",
+                    Name = "Estonian Aviation Museum",
+                    Category = "History",
+                    ShortDescription = "Estonia's only aviation museum, 16km from Tartu center in Lange.",
+                    FullDescription = "Founded 2002 from private collection; 32 planes, 6 helicopters, anti-air weapons, 500+ models, on-site runway.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Apr 25–May 22 & Sep 14–Oct 25: 11:00–16:00; May 23–Sep 13: 10:00–18:00",
+                    Address = "Langemäe, Kastre, Lange, 62115"
+                },
+                new Place
+                {
+                    Id = "oskar-lutsu-majamuuseum",
+                    Name = "Oskar Luts House Museum",
+                    Category = "History",
+                    ShortDescription = "House-museum of Estonian writer Oskar Luts (1887-1953), author of Kevade (Spring).",
+                    FullDescription = "Built 1936; functionalist house where Luts lived last 17 years; preserves work room and guest room; branch of Tartu City Museum since 1964.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Tue & Sun: Closed; Wed–Sat 11:00–17:00",
+                    Address = "Riia tn 38, 50405 Tartu"
+                },
+                new Place
+                {
+                    Id = "typa-letterpress-centre",
+                    Name = "TYPA Letterpress and Paper Art Centre",
+                    Category = "Entertainment",
+                    ShortDescription = "Unique center dedicated to letterpress printing and paper art in former shoe factory.",
+                    FullDescription = "Founded 2010 to save Baltic movable type presses; interactive workshops, exhibits on 19th–20th century printing history.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Tue: Closed; Wed–Sun 12:00–18:00",
+                    Address = "Kastani tn 48f, 50410 Tartu"
+                },
+                new Place
+                {
+                    Id = "baeri-muuseum",
+                    Name = "Baer Museum",
+                    Category = "History",
+                    ShortDescription = "House-museum of Karl Ernst von Baer (1792-1876), Estonian-German naturalist, embryology pioneer.",
+                    FullDescription = "In 1864 classicist wooden house on Toomemägi slope; restored 1976; now science history research center linked to Estonian University of Life Sciences.",
+                    Image = "https://images.unsplash.com/photo-1563273026-d342cef8f723?w=1080",
+                    Hours = "Mon–Fri 10:00–17:00; Weekends: Closed",
+                    Address = "Veski tn 4, 51005 Tartu"
                 },
                 
                 // Relaxation Category
