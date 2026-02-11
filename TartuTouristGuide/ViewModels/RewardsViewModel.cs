@@ -1,12 +1,81 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using TartuTouristGuide.Data;
+using TartuTouristGuide.Models;
+using TartuTouristGuide.Services;
 
 namespace TartuTouristGuide.ViewModels
 {
-    internal class RewardsViewModel
+    public class RewardItem
     {
+        public Reward Reward { get; set; } = new Reward();
+        public bool IsUnlocked { get; set; }
+        public string DisplayText { get; set; } = string.Empty;
+        public double OverlayOpacity { get; set; }
+    }
+
+    public class RewardsViewModel : BaseViewModel
+    {
+        private readonly VisitedPlacesService _visitedService;
+        private ObservableCollection<RewardItem> _rewardItems = new();
+        private string _unlockedText = string.Empty;
+        private bool _showEncouragement;
+        private bool _showCompletion;
+
+        public RewardsViewModel(VisitedPlacesService visitedService)
+        {
+            _visitedService = visitedService;
+        }
+
+        public ObservableCollection<RewardItem> RewardItems
+        {
+            get => _rewardItems;
+            set => SetProperty(ref _rewardItems, value);
+        }
+
+        public string UnlockedText
+        {
+            get => _unlockedText;
+            set => SetProperty(ref _unlockedText, value);
+        }
+
+        public bool ShowEncouragement
+        {
+            get => _showEncouragement;
+            set => SetProperty(ref _showEncouragement, value);
+        }
+
+        public bool ShowCompletion
+        {
+            get => _showCompletion;
+            set => SetProperty(ref _showCompletion, value);
+        }
+
+        public void LoadRewards()
+        {
+            var rewards = RewardsData.GetRewards();
+            var visitedPlaces = _visitedService.GetVisitedPlaces();
+
+            var items = new ObservableCollection<RewardItem>();
+            int unlockedCount = 0;
+
+            foreach (var reward in rewards)
+            {
+                bool isUnlocked = reward.RequiredPlaceIds.All(id => visitedPlaces.Contains(id));
+                if (isUnlocked) unlockedCount++;
+
+                items.Add(new RewardItem
+                {
+                    Reward = reward,
+                    IsUnlocked = isUnlocked,
+                    DisplayText = isUnlocked ? reward.Description : $"🔒 Visit {reward.RequiredPlaceIds.Count} places to unlock",
+                    OverlayOpacity = isUnlocked ? 0.3 : 0.7
+                });
+            }
+
+            RewardItems = items;
+            UnlockedText = $"{unlockedCount} / {rewards.Count} rewards unlocked";
+            ShowEncouragement = unlockedCount < rewards.Count;
+            ShowCompletion = unlockedCount == rewards.Count;
+        }
     }
 }

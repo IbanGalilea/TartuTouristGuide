@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0J2Jb0HUHKI=",
+  "dgSpecHash": "CWzIQZ8AfSw=",
   "success": true,
   "projectFilePath": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\TartuTouristGuide.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,7 @@
     "C:\\Users\\ibang\\.nuget\\packages\\microsoft.maui.graphics\\9.0.111\\microsoft.maui.graphics.9.0.111.nupkg.sha512",
     "C:\\Users\\ibang\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\9.0.111\\microsoft.maui.graphics.win2d.winui.desktop.9.0.111.nupkg.sha512",
     "C:\\Users\\ibang\\.nuget\\packages\\microsoft.maui.resizetizer\\9.0.111\\microsoft.maui.resizetizer.9.0.111.nupkg.sha512",
-    "C:\\Users\\ibang\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.12\\microsoft.net.illink.tasks.9.0.12.nupkg.sha512",
+    "C:\\Users\\ibang\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.13\\microsoft.net.illink.tasks.9.0.13.nupkg.sha512",
     "C:\\Users\\ibang\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\ibang\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\ibang\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512",

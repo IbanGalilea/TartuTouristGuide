@@ -57,23 +57,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = TartuTouristGuide.Resource
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Stage/2emeAnnee/TartuTouristGuide/TartuTouristGuide/Views/BuildingDetailPage.xaml]
+[C:/Stage/2emeAnnee/TartuTouristGuide/TartuTouristGuide/Views/CategoryListPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TartuTouristGuide.Views.BuildingDetailPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\BuildingDetailPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\BuildingDetailPage.xaml
-
-[C:/Stage/2emeAnnee/TartuTouristGuide/TartuTouristGuide/Views/CategoryDetailPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TartuTouristGuide.Views.CategoryDetailPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\CategoryDetailPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\CategoryDetailPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TartuTouristGuide.Views.CategoryListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CategoryListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CategoryListPage.xaml
 
 [C:/Stage/2emeAnnee/TartuTouristGuide/TartuTouristGuide/Views/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TartuTouristGuide.Views.HomePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\HomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\HomePage.xaml
+
+[C:/Stage/2emeAnnee/TartuTouristGuide/TartuTouristGuide/Views/PlaceDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TartuTouristGuide.Views.PlaceDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PlaceDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PlaceDetailPage.xaml
 
 [C:/Stage/2emeAnnee/TartuTouristGuide/TartuTouristGuide/Views/RewardsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TartuTouristGuide.ViewModels"
+             xmlns:models="clr-namespace:TartuTouristGuide.Models"
+             x:Class="TartuTouristGuide.Views.CategoryListPage"
+             x:DataType="vm:CategoryListViewModel"
+             Title="{Binding Category}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <VerticalStackLayout Spacing="10">
+                <Label Text="{Binding Category}"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="#1e3a8a" />
+                <Label Text="{Binding CountText}"
+                       FontSize="16"
+                       TextColor="#6b7280" />
+            </VerticalStackLayout>
+
+            <!-- Places List -->
+            <CollectionView ItemsSource="{Binding Places}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Place">
+                        <Border StrokeShape="RoundRectangle 10" 
+                                StrokeThickness="0" 
+                                Margin="0,0,0,15">
+                            <Border.Shadow>
+                                <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                            </Border.Shadow>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CategoryListViewModel}}, Path=NavigateToPlaceCommand}"
+                                    CommandParameter="{Binding Id}" />
+                            </Border.GestureRecognizers>
+                            <Grid>
+                                <Image Source="{Binding Image}" 
+                                       Aspect="AspectFill"
+                                       HeightRequest="200" />
+                                <BoxView Color="Black" Opacity="0.3" />
+                                <VerticalStackLayout Padding="15" VerticalOptions="End">
+                                    <Label Text="{Binding Name}" 
+                                           FontSize="22" 
+                                           FontAttributes="Bold"
+                                           TextColor="White" />
+                                    <Label Text="{Binding ShortDescription}" 
+                                           FontSize="14"
+                                           TextColor="White"
+                                           Opacity="0.9" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

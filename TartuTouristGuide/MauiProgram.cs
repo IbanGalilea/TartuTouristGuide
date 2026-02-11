@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using TartuTouristGuide.Services;
+using TartuTouristGuide.ViewModels;
+using TartuTouristGuide.Views;
 
 namespace TartuTouristGuide
 {
@@ -15,8 +18,23 @@ namespace TartuTouristGuide
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // Register Services (Singleton pour partager l'état)
+            builder.Services.AddSingleton<VisitedPlacesService>();
+
+            // Register ViewModels (Transient pour créer une nouvelle instance à chaque fois)
+            builder.Services.AddTransient<HomeViewModel>();
+            builder.Services.AddTransient<CategoryListViewModel>();
+            builder.Services.AddTransient<PlaceDetailViewModel>();
+            builder.Services.AddTransient<RewardsViewModel>();
+
+            // Register Views (Transient)
+            builder.Services.AddTransient<HomePage>();
+            builder.Services.AddTransient<CategoryListPage>();
+            builder.Services.AddTransient<PlaceDetailPage>();
+            builder.Services.AddTransient<RewardsPage>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TartuTouristGuide.ViewModels"
+             x:Class="TartuTouristGuide.Views.PlaceDetailPage"
+             x:DataType="vm:PlaceDetailViewModel"
+             Title="{Binding Place.Name}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Image -->
+            <Border StrokeShape="RoundRectangle 10" Padding="0" StrokeThickness="0">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <Image Source="{Binding Place.Image}"
+                       Aspect="AspectFill"
+                       HeightRequest="300" />
+            </Border>
+
+            <!-- Content Card -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <!-- Title -->
+                    <Label Text="{Binding Place.Name}"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="#1e3a8a" />
+
+                    <!-- Info -->
+                    <VerticalStackLayout Spacing="10">
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="🕐" FontSize="16" />
+                            <Label Text="{Binding Place.Hours}"
+                                   FontSize="14"
+                                   TextColor="#6b7280" />
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="10">
+                            <Label Text="📍" FontSize="16" />
+                            <Label Text="{Binding Place.Address}"
+                                   FontSize="14"
+                                   TextColor="#3b82f6"
+                                   TextDecorations="Underline">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding OpenMapsCommand}" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+
+                    <!-- Description -->
+                    <Label Text="{Binding Place.FullDescription}"
+                           FontSize="16"
+                           LineHeight="1.6"
+                           TextColor="#374151" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Visit Checkbox -->
+            <Border StrokeShape="RoundRectangle 10" Padding="15" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <HorizontalStackLayout Spacing="15">
+                    <CheckBox IsChecked="{Binding IsVisited}"
+                              Color="{Binding CheckboxColor}"
+                              CheckedChanged="OnCheckBoxChanged" />
+                    <Label Text="{Binding VisitedText}"
+                           FontSize="18"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Border>
+
+            <!-- Back Button -->
+            <Button Text="Back to home"
+                    Command="{Binding BackCommand}"
+                    BackgroundColor="White"
+                    TextColor="#3b82f6"
+                    BorderColor="#3b82f6"
+                    BorderWidth="1"
+                    FontSize="16"
+                    HeightRequest="50"
+                    CornerRadius="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

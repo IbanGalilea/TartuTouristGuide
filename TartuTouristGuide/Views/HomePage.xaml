@@ -1,11 +1,163 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TartuTouristGuide.Views.HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentView>
+             xmlns:vm="clr-namespace:TartuTouristGuide.ViewModels"
+             x:Class="TartuTouristGuide.Views.HomePage"
+             x:DataType="vm:HomeViewModel"
+             Title="Discover Tartu">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Discover Tartu"
+                       FontSize="36"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#1e3a8a" />
+                <Label Text="Explore Estonia's university city"
+                       FontSize="18"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#4b5563" />
+            </VerticalStackLayout>
+
+            <!-- Progress Section -->
+            <Border Stroke="#eff6ff" StrokeThickness="0" Background="#eff6ff" StrokeShape="RoundRectangle 10" Padding="20">
+                <VerticalStackLayout Spacing="10">
+                    <Grid>
+                        <Label Text="Discovery Progress" 
+                               FontSize="20" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start" />
+                        <Label Text="{Binding ProgressText}"
+                               FontSize="24" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="End" />
+                    </Grid>
+                    <ProgressBar Progress="{Binding ProgressValue}"
+                                 ProgressColor="#3b82f6"
+                                 HeightRequest="12" />
+                    <Label Text="{Binding VisitedText}"
+                           FontSize="14"
+                           TextColor="#6b7280" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Categories -->
+            <VerticalStackLayout Spacing="15">
+                <!-- History -->
+                <Border Stroke="#3b82f6" StrokeThickness="1" Background="#3b82f6" StrokeShape="RoundRectangle 10">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="History" />
+                    </Border.GestureRecognizers>
+                    <Grid Padding="20" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="🏛️" FontSize="40" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                            <Label Text="History" 
+                                   FontSize="22" 
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            <Label Text="Discover the historical heritage" 
+                                   FontSize="14"
+                                   TextColor="White" 
+                                   Opacity="0.9" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+                <!-- Relaxation -->
+                <Border Stroke="#22c55e" StrokeThickness="1" Background="#22c55e" StrokeShape="RoundRectangle 10">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="Relaxation" />
+                    </Border.GestureRecognizers>
+                    <Grid Padding="20" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="🌿" FontSize="40" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                            <Label Text="Relaxation" 
+                                   FontSize="22" 
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            <Label Text="Relaxation spaces and nature" 
+                                   FontSize="14"
+                                   TextColor="White" 
+                                   Opacity="0.9" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+                <!-- Entertainment -->
+                <Border Stroke="#a855f7" StrokeThickness="1" Background="#a855f7" StrokeShape="RoundRectangle 10">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="Entertainment" />
+                    </Border.GestureRecognizers>
+                    <Grid Padding="20" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="✨" FontSize="40" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                            <Label Text="Entertainment" 
+                                   FontSize="22" 
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            <Label Text="Museums and cultural attractions" 
+                                   FontSize="14"
+                                   TextColor="White" 
+                                   Opacity="0.9" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+                <!-- Restaurants -->
+                <Border Stroke="#f97316" StrokeThickness="1" Background="#f97316" StrokeShape="RoundRectangle 10">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="Restaurants" />
+                    </Border.GestureRecognizers>
+                    <Grid Padding="20" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="🍽️" FontSize="40" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                            <Label Text="Restaurants" 
+                                   FontSize="22" 
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            <Label Text="Flavors and local gastronomy" 
+                                   FontSize="14"
+                                   TextColor="White" 
+                                   Opacity="0.9" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Rewards Button -->
+            <Button Text="View my rewards"
+                    Command="{Binding NavigateToRewardsCommand}"
+                    BackgroundColor="#3b82f6"
+                    TextColor="White"
+                    FontSize="18"
+                    HeightRequest="60"
+                    CornerRadius="10" />
+
+            <!-- Footer -->
+            <Label Text="Tartu Tourist Guide, Estonia"
+                   FontSize="12"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#9ca3af"
+                   Margin="0,20,0,0" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

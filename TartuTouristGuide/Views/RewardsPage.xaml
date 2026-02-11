@@ -1,11 +1,90 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TartuTouristGuide.Views.RewardsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentView>
+             xmlns:vm="clr-namespace:TartuTouristGuide.ViewModels"
+             x:Class="TartuTouristGuide.Views.RewardsPage"
+             x:DataType="vm:RewardsViewModel"
+             Title="My Rewards">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="🏆" FontSize="32" />
+                    <Label Text="My Rewards"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           TextColor="#1e3a8a"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <Label Text="{Binding UnlockedText}"
+                       FontSize="16"
+                       TextColor="#6b7280" />
+            </VerticalStackLayout>
+
+            <!-- Rewards List -->
+            <CollectionView ItemsSource="{Binding RewardItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="vm:RewardItem">
+                        <Border StrokeShape="RoundRectangle 10" 
+                                StrokeThickness="0" 
+                                Margin="0,0,0,15">
+                            <Border.Shadow>
+                                <Shadow Brush="Black" Opacity="0.5" Offset="0,4" Radius="10" />
+                            </Border.Shadow>
+                            <Grid>
+                                <Image Source="{Binding Reward.Image}" 
+                                       Aspect="AspectFill"
+                                       HeightRequest="200" />
+                                <BoxView Color="Black" Opacity="{Binding OverlayOpacity}" />
+                                <VerticalStackLayout Padding="15" VerticalOptions="End">
+                                    <Label Text="{Binding Reward.Name}" 
+                                           FontSize="22" 
+                                           FontAttributes="Bold"
+                                           TextColor="White" />
+                                    <Label Text="{Binding DisplayText}" 
+                                           FontSize="14"
+                                           TextColor="White"
+                                           Opacity="0.9"
+                                           LineBreakMode="WordWrap" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Encouragement -->
+            <Border StrokeShape="RoundRectangle 10"
+                    Padding="20"
+                    Background="#eff6ff"
+                    IsVisible="{Binding ShowEncouragement}">
+                <Label Text="Continue exploring Tartu to unlock all rewards! 🎉"
+                       FontSize="16"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#374151" />
+            </Border>
+
+            <!-- Completion Message -->
+            <Border StrokeShape="RoundRectangle 10"
+                    Padding="20"
+                    Background="#fef3c7"
+                    IsVisible="{Binding ShowCompletion}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="🏆" FontSize="48" HorizontalTextAlignment="Center" />
+                    <Label Text="Congratulations! 🎉"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="You've unlocked all rewards and explored all of Tartu!"
+                           FontSize="14"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#374151" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
