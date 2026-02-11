@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TartuTouristGuide")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+2747f42c7fd395b5119d6b68dde25050da324bd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+bea6adb05d1a0c188497590d8adebe3213c1ae7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TartuTouristGuide")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TartuTouristGuide")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
