@@ -13,6 +13,7 @@ namespace TartuTouristGuide.Data
         {
             return new List<Place>
             {
+                // History Category
                 new Place
                 {
                     Id = "hotel-de-ville",
@@ -46,6 +47,8 @@ namespace TartuTouristGuide.Data
                     Hours = "Tue-Sun: 11am-5pm",
                     Address = "Lossi 25, 50090 Tartu"
                 },
+                
+                // Relaxation Category
                 new Place
                 {
                     Id = "jardin-botanique",
@@ -68,6 +71,8 @@ namespace TartuTouristGuide.Data
                     Hours = "Open 24/7",
                     Address = "Toomemägi, 50090 Tartu"
                 },
+                
+                // Entertainment Category
                 new Place
                 {
                     Id = "musee-art",
@@ -90,6 +95,8 @@ namespace TartuTouristGuide.Data
                     Hours = "Mon-Sun: 10am-7pm",
                     Address = "Sadama 1, 50051 Tartu"
                 },
+                
+                // Food places Category
                 new Place
                 {
                     Id = "restaurant-hõlm",
