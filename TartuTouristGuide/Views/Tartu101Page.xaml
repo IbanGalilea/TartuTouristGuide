@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TartuTouristGuide.Views.Tartu101Page"
+             Title="Tartu 101">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="📚" FontSize="32" />
+                    <Label Text="Tartu 101"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           TextColor="#1e3a8a"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <Label Text="Essential information for your stay in Tartu"
+                       FontSize="16"
+                       TextColor="#6b7280" />
+            </VerticalStackLayout>
+
+            <!-- Emergency Numbers -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="🚨 Emergency Numbers"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#ef4444" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="• General Emergency: 112" FontSize="16" />
+                        <Label Text="• Police: 110" FontSize="16" />
+                        <Label Text="• Ambulance: 112" FontSize="16" />
+                        <Label Text="• Fire Department: 112" FontSize="16" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Transportation -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="🚌 Transportation"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#3b82f6" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="• City Bus: Single ticket €1.20, Day pass €3" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Bolt/Uber: Available throughout the city" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Bike Rental: Tartu Smart Bike system available" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Walking: City center is very walkable (15-20 min)" FontSize="16" LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Accommodation -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="🏨 Accommodation Areas"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#a855f7" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="• Old Town: Best for sightseeing, central location" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Raekoja Plats: Main square area, restaurants nearby" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Supilinn: Charming wooden house district" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• University Area: Quiet, good for longer stays" FontSize="16" LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Pharmacies & Healthcare -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="⚕️ Pharmacies &amp; Healthcare"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#22c55e" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="• Benu Apteek (Raekoja Plats): Open daily 9am-8pm" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Südameapteek (Riia 2): 24/7 Pharmacy" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Tartu University Hospital: Major medical center" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Family Doctors: Available with appointment" FontSize="16" LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Supermarkets -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="🛒 Supermarkets"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#f97316" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="• Rimi (Keskus): Large supermarket, open 8am-10pm" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Selver (Lõunakeskus): Major chain, good selection" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Maxima: Budget-friendly, multiple locations" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Coop: Local products, smaller stores" FontSize="16" LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Must-Visit Places -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                </Border.Shadow>
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="🌟 Must-Visit Places"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#1e3a8a" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="• Raekoja Plats (Town Hall Square): City center" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Toomemägi Park: Beautiful historic hill park" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• University of Tartu: Historic campus tours" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Kissing Students Fountain: Iconic landmark" FontSize="16" LineBreakMode="WordWrap" />
+                        <Label Text="• Supilinn District: Colorful wooden houses" FontSize="16" LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Tourist Information -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="#fef3c7">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="ℹ️ Tourist Information Center"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#92400e" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="📍 Location: Raekoja Plats 1a" FontSize="16" TextColor="#78350f" LineBreakMode="WordWrap" />
+                        <Label Text="🕐 Hours: Mon-Fri 9am-6pm, Sat-Sun 10am-4pm" FontSize="16" TextColor="#78350f" LineBreakMode="WordWrap" />
+                        <Label Text="📞 Phone: +372 744 2111" FontSize="16" TextColor="#78350f" LineBreakMode="WordWrap" />
+                        <Label Text="🌐 Website: visittartu.com" FontSize="16" TextColor="#78350f" TextDecorations="Underline" LineBreakMode="WordWrap">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnWebsiteTapped" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Useful Tips -->
+            <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="#eff6ff">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="💡 Useful Tips"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#1e40af" />
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="• Currency: Euro (€)" FontSize="16" TextColor="#1e3a8a" />
+                        <Label Text="• Language: Estonian (English widely spoken)" FontSize="16" TextColor="#1e3a8a" LineBreakMode="WordWrap" />
+                        <Label Text="• Tipping: Not mandatory, 10% appreciated" FontSize="16" TextColor="#1e3a8a" LineBreakMode="WordWrap" />
+                        <Label Text="• Wi-Fi: Free in most cafes and public areas" FontSize="16" TextColor="#1e3a8a" LineBreakMode="WordWrap" />
+                        <Label Text="• Best Time to Visit: May-September" FontSize="16" TextColor="#1e3a8a" LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Back Button -->
+            <Button Text="Back to Home"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="#ef4444"
+                    TextColor="White"
+                    FontSize="18"
+                    HeightRequest="60"
+                    CornerRadius="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
