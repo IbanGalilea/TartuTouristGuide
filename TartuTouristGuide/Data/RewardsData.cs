@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TartuTouristGuide.Models;
-using TartuTouristGuide.Models;
 
 namespace TartuTouristGuide.Data
 {
