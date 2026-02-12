@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Microsoft.Maui.Controls;
 using TartuTouristGuide.Data;
 using TartuTouristGuide.Models;
 using TartuTouristGuide.Services;
@@ -11,12 +12,12 @@ namespace TartuTouristGuide.ViewModels
         private readonly VisitedPlacesService _visitedService;
         private string _category = string.Empty;
         private string _countText = string.Empty;
-        private ObservableCollection<Place> _Places = new();
+        private ObservableCollection<Place> _buildings = new();
 
         public CategoryListViewModel(VisitedPlacesService visitedService)
         {
             _visitedService = visitedService;
-            NavigateToPlaceCommand = new Command<string>(async (PlaceId) => await NavigateToPlace(PlaceId));
+            NavigateToPlaceCommand = new Command<string>(async (buildingId) => await NavigateToPlace(buildingId));
         }
 
         public string Category
@@ -39,8 +40,8 @@ namespace TartuTouristGuide.ViewModels
 
         public ObservableCollection<Place> Places
         {
-            get => _Places;
-            set => SetProperty(ref _Places, value);
+            get => _buildings;
+            set => SetProperty(ref _buildings, value);
         }
 
         public ICommand NavigateToPlaceCommand { get; }
@@ -62,9 +63,9 @@ namespace TartuTouristGuide.ViewModels
             CountText = $"{categoryPlaces.Count} {(categoryPlaces.Count > 1 ? "places" : "place")} to discover";
         }
 
-        private async Task NavigateToPlace(string PlaceId)
+        private async Task NavigateToPlace(string buildingId)
         {
-            await Shell.Current.GoToAsync($"PlaceDetailPage?id={PlaceId}");
+            await Shell.Current.GoToAsync($"PlaceDetailPage?id={buildingId}");
         }
     }
 }

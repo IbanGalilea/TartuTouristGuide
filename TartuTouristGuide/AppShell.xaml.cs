@@ -11,6 +11,7 @@ namespace TartuTouristGuide
             Routing.RegisterRoute("CategoryListPage", typeof(CategoryListPage));
             Routing.RegisterRoute("PlaceDetailPage", typeof(PlaceDetailPage));
             Routing.RegisterRoute("RewardsPage", typeof(RewardsPage));
+            Routing.RegisterRoute("Tartu101Page", typeof(Tartu101Page));
         }
     }
 }

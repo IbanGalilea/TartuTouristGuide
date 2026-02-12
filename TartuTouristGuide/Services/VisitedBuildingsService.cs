@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Maui.Storage;
 
 namespace TartuTouristGuide.Services
 {
@@ -18,24 +19,47 @@ namespace TartuTouristGuide.Services
 
         private void LoadVisitedPlaces()
         {
-            var visited = Preferences.Get(VisitedKey, "");
-            _visitedPlaces = string.IsNullOrEmpty(visited)
-                ? new HashSet<string>()
-                : new HashSet<string>(visited.Split(','));
+            try
+            {
+                var visited = Preferences.Get(VisitedKey, "");
+                _visitedPlaces = string.IsNullOrWhiteSpace(visited)
+                    ? new HashSet<string>()
+                    : new HashSet<string>(visited
+                        .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                        .Select(s => s.Trim()));
+            }
+            catch
+            {
+                // Si Preferences lève une exception, on initialise proprement la collection
+                _visitedPlaces = new HashSet<string>();
+            }
         }
 
         private void SaveVisitedPlaces()
         {
-            Preferences.Set(VisitedKey, string.Join(",", _visitedPlaces));
+            try
+            {
+                Preferences.Set(VisitedKey, string.Join(",", _visitedPlaces));
+            }
+            catch
+            {
+                // Échec d'enregistrement : on ignore pour éviter le plantage en runtime
+            }
         }
 
         public bool IsVisited(string PlaceId)
         {
+            if (string.IsNullOrWhiteSpace(PlaceId))
+                return false;
+
             return _visitedPlaces.Contains(PlaceId);
         }
 
         public void ToggleVisited(string PlaceId)
         {
+            if (string.IsNullOrWhiteSpace(PlaceId))
+                return;
+
             if (_visitedPlaces.Contains(PlaceId))
             {
                 _visitedPlaces.Remove(PlaceId);
@@ -54,7 +78,7 @@ namespace TartuTouristGuide.Services
 
         public List<string> GetVisitedPlaces()
         {
-            return _visitedPlaces.ToList();
+            return _visitedPlaces.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
         }
     }
 }

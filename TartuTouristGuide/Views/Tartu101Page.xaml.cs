@@ -1,5 +1,3 @@
-using TartuTouristGuide.ViewModels;
-
 namespace TartuTouristGuide.Views
 {
     public partial class Tartu101Page : ContentPage

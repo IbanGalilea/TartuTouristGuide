@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using Microsoft.Maui.Controls;
 using TartuTouristGuide.Data;
 using TartuTouristGuide.Models;
 using TartuTouristGuide.Services;
@@ -8,8 +9,8 @@ namespace TartuTouristGuide.ViewModels
     public class PlaceDetailViewModel : BaseViewModel, IQueryAttributable
     {
         private readonly VisitedPlacesService _visitedService;
-        private string _PlaceId = string.Empty;
-        private Place? _Place;
+        private string _placeId = string.Empty;
+        private Place? _place;
         private bool _isVisited;
         private string _visitedText = string.Empty;
         private Color _checkboxColor = Color.FromArgb("#3b82f6");
@@ -25,8 +26,8 @@ namespace TartuTouristGuide.ViewModels
 
         public Place? Place
         {
-            get => _Place;
-            set => SetProperty(ref _Place, value);
+            get => _place;
+            set => SetProperty(ref _place, value);
         }
 
         public bool IsVisited
@@ -61,7 +62,7 @@ namespace TartuTouristGuide.ViewModels
         {
             if (query.ContainsKey("id"))
             {
-                _PlaceId = Uri.UnescapeDataString(query["id"].ToString() ?? string.Empty);
+                _placeId = Uri.UnescapeDataString(query["id"].ToString() ?? string.Empty);
                 LoadPlace();
             }
         }
@@ -69,24 +70,70 @@ namespace TartuTouristGuide.ViewModels
         private void LoadPlace()
         {
             var allPlaces = PlacesData.GetPlaces();
-            Place = allPlaces.FirstOrDefault(b => b.Id == _PlaceId);
+            Place = allPlaces.FirstOrDefault(b => b.Id == _placeId);
 
             if (Place != null)
             {
-                IsVisited = _visitedService.IsVisited(_PlaceId);
+                _isVisited = _visitedService.IsVisited(_placeId);
+                OnPropertyChanged(nameof(IsVisited));
+                UpdateVisitedText(); // Initialiser le texte dès le début
             }
         }
 
         private void ToggleVisited()
         {
-            _visitedService.ToggleVisited(_PlaceId);
-            IsVisited = _visitedService.IsVisited(_PlaceId);
+            _visitedService.ToggleVisited(_placeId);
+
+            // Mettre à jour l'état
+            _isVisited = _visitedService.IsVisited(_placeId);
+            OnPropertyChanged(nameof(IsVisited));
+            UpdateVisitedText();
+
+            // Vérifier les nouveaux succès débloqués
+            CheckForNewRewards();
         }
 
         private void UpdateVisitedText()
         {
-            VisitedText = IsVisited ? "Place visited" : "Mark as VISITED";
-            CheckboxColor = IsVisited ? Color.FromArgb("#22c55e") : Color.FromArgb("#3b82f6");
+            VisitedText = _isVisited ? "Place visited" : "Mark as VISITED";
+            CheckboxColor = _isVisited ? Color.FromArgb("#22c55e") : Color.FromArgb("#3b82f6");
+        }
+
+        private async void CheckForNewRewards()
+        {
+            var rewards = RewardsData.GetRewards();
+            var visitedPlaces = _visitedService.GetVisitedPlaces();
+
+            foreach (var reward in rewards)
+            {
+                bool wasUnlockedBefore = reward.RequiredPlaceIds
+                    .Where(id => id != _placeId)
+                    .All(id => visitedPlaces.Contains(id));
+
+                bool isUnlockedNow = reward.RequiredPlaceIds
+                    .All(id => visitedPlaces.Contains(id));
+
+                // Si le succès vient d'être débloqué
+                if (!wasUnlockedBefore && isUnlockedNow)
+                {
+                    await ShowRewardUnlockedPopup(reward);
+                }
+            }
+        }
+
+        private async Task ShowRewardUnlockedPopup(Reward reward)
+        {
+            bool goToRewards = await Application.Current.MainPage.DisplayAlert(
+                "🏆 Reward Unlocked!",
+                $"{reward.Name}\n\n{reward.Description}",
+                "View Rewards",
+                "Continue Exploring"
+            );
+
+            if (goToRewards)
+            {
+                await Shell.Current.GoToAsync("//HomePage/RewardsPage");
+            }
         }
 
         private async Task OpenMaps()

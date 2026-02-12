@@ -66,10 +66,13 @@
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
                 </Border.Shadow>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ToggleVisitedCommand}" />
+                </Border.GestureRecognizers>
                 <HorizontalStackLayout Spacing="15">
                     <CheckBox IsChecked="{Binding IsVisited}"
                               Color="{Binding CheckboxColor}"
-                              CheckedChanged="OnCheckBoxChanged" />
+                              IsEnabled="False" />
                     <Label Text="{Binding VisitedText}"
                            FontSize="18"
                            VerticalOptions="Center" />
