@@ -54,6 +54,8 @@ namespace TartuTouristGuide.ViewModels
         {
             var rewards = RewardsData.GetRewards();
             var visitedPlaces = _visitedService.GetVisitedPlaces();
+            var allPlaces = PlacesData.GetPlaces();
+            int totalPlaces = allPlaces.Count;
 
             var items = new ObservableCollection<RewardItem>();
             int unlockedCount = 0;
@@ -63,13 +65,26 @@ namespace TartuTouristGuide.ViewModels
                 bool isUnlocked = reward.RequiredPlaceIds.All(id => visitedPlaces.Contains(id));
                 if (isUnlocked) unlockedCount++;
 
-                items.Add(new RewardItem
+                if (reward.Category != "Complete")
                 {
-                    Reward = reward,
-                    IsUnlocked = isUnlocked,
-                    DisplayText = isUnlocked ? reward.Description : $"🔒 Visit {reward.RequiredPlaceIds.Count} places to unlock",
-                    OverlayOpacity = isUnlocked ? 0.3 : 0.7
-                });
+                    items.Add(new RewardItem
+                    {
+                        Reward = reward,
+                        IsUnlocked = isUnlocked,
+                        DisplayText = isUnlocked ? reward.Description : $"🔒 Visit {reward.RequiredPlaceIds.Count} places in the {reward.Category} to unlock",
+                        OverlayOpacity = isUnlocked ? 0.3 : 0.7
+                    });
+                }
+                else
+                {
+                    items.Add(new RewardItem
+                    {
+                        Reward = reward,
+                        IsUnlocked = isUnlocked,
+                        DisplayText = isUnlocked ? reward.Description : $"🔒 Visit every places in Tartu to unlock ({visitedPlaces.Count}/{totalPlaces})",
+                        OverlayOpacity = isUnlocked ? 0.3 : 0.7
+                    });
+                }
             }
 
             RewardItems = items;
