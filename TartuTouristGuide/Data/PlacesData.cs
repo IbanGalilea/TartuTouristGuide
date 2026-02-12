@@ -262,25 +262,113 @@ namespace TartuTouristGuide.Data
                 // Entertainment Category
                 new Place
                 {
-                    Id = "musee-art",
-                    Name = "Tartu Art Museum",
+                    Id = "ahhaa-science-centre",
+                    Name = "Centre scientifique AHHAA",
                     Category = "Entertainment",
-                    ShortDescription = "Exceptional collection of Estonian and international art.",
-                    FullDescription = "The Tartu Art Museum, located in the Leaning House on Town Hall Square, presents a rich collection of Estonian art from the 18th century to the present day. Temporary exhibitions showcase contemporary artists. The Place itself is an attraction, with its unique baroque architecture and characteristic tilt.",
-                    Image = "https://images.unsplash.com/photo-1694376390682-8a5222d40fa9?w=1080",
-                    Hours = "Wed-Sun: 11am-6pm",
-                    Address = "Raekoja plats 18, 51004 Tartu"
+                    ShortDescription = "Large interactive science center with hands-on experiments, exhibits, shows, and planetarium.",
+                    FullDescription = "AHHAA Science Centre offers practical experiments, interactive exhibits, shows, and a planetarium suitable for kids and adults alike, with plenty of fun educational activities.",
+                    Image = "EntertainmentCategory/ahhaasciencecentre.png",
+                    Hours = "Mon-Thu: 10:00am-7:00pm\nFri-Sat: 10:00am-8:00pm\nSun: 10:00am-7:00pm",
+                    Address = "Sadama 1, 51004 Tartu"
                 },
                 new Place
                 {
-                    Id = "centre-science-ahhaa",
-                    Name = "AHHAA Science Centre",
+                    Id = "vanemuine-theater",
+                    Name = "Théâtre Vanemuine",
                     Category = "Entertainment",
-                    ShortDescription = "Interactive science museum for the whole family.",
-                    FullDescription = "AHHAA is the largest science center in the Baltic countries, offering more than 170 interactive exhibitions. Visitors of all ages can explore science through hands-on experiences, a modern planetarium and educational workshops. It's a must-visit destination for families and curious minds who want to learn while having fun.",
-                    Image = "https://images.unsplash.com/photo-1614636401882-aa1a36704629?w=1080",
-                    Hours = "Mon-Sun: 10am-7pm",
-                    Address = "Sadama 1, 50051 Tartu"
+                    ShortDescription = "Tartu's main theater for operas, ballets, plays, and musicals.",
+                    FullDescription = "Vanemuine Theater, Tartu's principal venue, features operas, ballets, plays, and musicals. Some shows have English surtitles; tickets available online or on-site.",
+                    Image = "EntertainmentCategory/vanemuinetheater.png",
+                    Hours = "Mon-Sat: 10:00am-7:00pm",
+                    Address = "Vanemuise tn 6, 51003 Tartu"
+                },
+                new Place
+                {
+                    Id = "tartu-toy-museum",
+                    Name = "Musée du Jouet de Tartu",
+                    Category = "Entertainment",
+                    ShortDescription = "Fun museum showcasing Estonian and international toys with play areas for kids.",
+                    FullDescription = "Tartu Toy Museum displays Estonian and global toys, plus kids' play zones, exhibits, workshops, and regular animations—ideal for families.",
+                    Image = "EntertainmentCategory/tartutoymuseum.png",
+                    Hours = "Mon-Tue: Closed\nWed-Sun: 11:00am-6:00pm",
+                    Address = "Lutsu tn 8, 51005 Tartu"
+                },
+                new Place
+                {
+                    Id = "a-le-coq-beer-museum",
+                    Name = "Musée de la Bière A. Le Coq",
+                    Category = "Entertainment",
+                    ShortDescription = "Museum tracing A. Le Coq brewery and Estonian beer history.",
+                    FullDescription = "A. Le Coq Beer Museum explores the brewery's history and Estonia's beer heritage. Guided tours often end with adult tastings.",
+                    Image = "EntertainmentCategory/alecoqbeermuseum.png",
+                    Hours = "Mon: Closed\nTue-Fri: 11:00am-6:00pm\nSat: 11:00am-5:00pm\nSun: Closed",
+                    Address = "Laulupeo pst 15, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "ice-age-centre",
+                    Name = "Centre de l’Âge de Glace (Ice Age Centre)",
+                    Category = "Entertainment",
+                    ShortDescription = "Themed center near Tartu on Ice Age, prehistoric animals, and climate.",
+                    FullDescription = "Ice Age Centre features interactive exhibits and models on the Ice Age, prehistoric fauna, and climate—great for families.",
+                    Image = "EntertainmentCategory/iceagecentre.png",
+                    Hours = "Mon: Closed\nTue-Sun: 10:00am-5:00pm",
+                    Address = "Saadjärve tn 20, Äksi, 60543 Tartu maakond"
+                },
+                new Place
+                {
+                    Id = "devil-bridge-kuradisild",
+                    Name = "Pont du Diable (Kuradisild)",
+                    Category = "Entertainment",
+                    ShortDescription = "Stone bridge with local legends on Toome Hill.",
+                    FullDescription = "Devil's Bridge (Kuradisild) is a historic stone bridge tied to local legends, ideal for walks and photos, especially evenings on Toome Hill.",
+                    Image = "EntertainmentCategory/devilbridge.png",
+                    Hours = "Always open",
+                    Address = "Lossi 36a, 51003 Tartu"
+                },
+                new Place
+                {
+                    Id = "tartu-lumepark",
+                    Name = "Tartu Lumepark",
+                    Category = "Entertainment",
+                    ShortDescription = "Family winter attraction park with snow tubing and ski/snowboard.",
+                    FullDescription = "Tartu Lumepark offers family snow activities like tubing slides (tuubiradas) and ski/snowboard in a dedicated winter fun zone.",
+                    Image = "EntertainmentCategory/tartulumepark.png",
+                    Hours = "Mon: Closed\nTue-Fri: 12:00pm-8:00pm\nSat: 10:00am-8:00pm\nSun: 10:00am-6:00pm",
+                    Address = "Muuseumi tee 5, 60534 Tartu"
+                },
+                new Place
+                {
+                    Id = "escape-tartu",
+                    Name = "Escape Tartu",
+                    Category = "Entertainment",
+                    ShortDescription = "Dynamic escape room center with immersive team adventures.",
+                    FullDescription = "Escape Tartu features themed escape games (prison, zombie virus, time travel) with puzzles and effects, plus lasertag for groups—perfect for team-building.",
+                    Image = "EntertainmentCategory/escapetartu.png",
+                    Hours = "Mon-Fri: 10:00am-10:00pm\nSat: 9:00am-10:00pm\nSun: 10:00am-10:00pm",
+                    Address = "Tiigi tn 78, 50410 Tartu"
+                },
+                new Place
+                {
+                    Id = "tartu-adventure-park",
+                    Name = "Tartu Adventure Park Ltd.",
+                    Category = "Entertainment",
+                    ShortDescription = "Dynamic treetop adventure park with 50+ aerial challenges.",
+                    FullDescription = "Tartu Adventure Park offers 4 progressive courses (kids to expert) with bridges, nets, ziplines up to 300m, plus kids' zone—great for families and teams.",
+                    Image = "EntertainmentCategory/tartuadventurepark.png",
+                    Hours = "Mon-Fri: Closed\nSat-Sun: 11:00am-7:00pm",
+                    Address = "Narva mnt 126b, 50303 Tartu"
+                },
+                new Place
+                {
+                    Id = "bowlex-ltd",
+                    Name = "Bowlex Ltd.",
+                    Category = "Entertainment",
+                    ShortDescription = "Largest bowling in South Estonia with 10 modern lanes.",
+                    FullDescription = "Bowlex Ltd. (FunBowling) features 10 AMF lanes with touchscreens, bumpers for kids, billiards, bar, and neon light shows for fun evenings.",
+                    Image = "EntertainmentCategory/bowlex.png",
+                    Hours = "Mon-Tue: Closed\nWed-Thu: 2:00pm-11:00pm\nFri: 2:00pm-12:00am\nSat: 12:00pm-12:00am\nSun: 12:00pm-10:00pm",
+                    Address = "Võru tn 55F, 50111 Tartu"
                 },
                 
                 // Food places Category

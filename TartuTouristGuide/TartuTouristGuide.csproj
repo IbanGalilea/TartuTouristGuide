@@ -77,6 +77,46 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+		<None Remove="Resources\Images\EntertainmentCategory\alecoqbeermuseum.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\alecoqbeermuseum.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\ahhaasciencecentre.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\ahhaasciencecentre.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\bowlex.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\bowlex.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\devilbridge.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\devilbridge.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\escapetartu.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\escapetartu.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\iceagecentre.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\iceagecentre.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\tartuadventurepark.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\tartuadventurepark.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\tartulumepark.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\tartulumepark.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\tartutoymuseum.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\tartutoymuseum.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\vanemuinetheater.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\vanemuinetheater.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\chezandre.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\chezandre.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\coffeewerner.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\coffeewerner.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\crepp.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\crepp.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\gunpowdercellar.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\gunpowdercellar.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\hansatall.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\hansatall.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\ladolcevita.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\ladolcevita.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\munchenweihenstephanerwirtshaus.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\munchenweihenstephanerwirtshaus.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\pierre.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\pierre.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\restaurantaparaat.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\restaurantaparaat.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\zoneaparaaditehas.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\zoneaparaaditehas.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -106,7 +146,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\Entertainment\" />
 	  <Folder Include="Resources\Images\RelaxationCategory\" />
 	  <Folder Include="Resources\Images\Tartu101Category\" />
 	</ItemGroup>
