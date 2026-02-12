@@ -45,8 +45,10 @@
                             <Grid>
                                 <Image Source="{Binding Place.Image}" 
                                        Aspect="AspectFill"
+                                       ZIndex="2"
+                                       Opacity="0.6"
                                        HeightRequest="200" />
-                                <BoxView Color="Black" Opacity="0.3" />
+                                <BoxView Color="Black" Opacity="0.3" ZIndex="1" />
 
                                 <!-- Visited Badge (Top Right Corner) -->
                                 <Border BackgroundColor="#22c55e"
@@ -55,6 +57,7 @@
                                         Margin="10"
                                         HorizontalOptions="End"
                                         VerticalOptions="Start"
+                                        ZIndex="3"
                                         IsVisible="{Binding IsVisited}">
                                     <Label Text="✓ Visited"
                                            TextColor="White"
@@ -62,11 +65,11 @@
                                            FontAttributes="Bold" />
                                 </Border>
 
-                                <VerticalStackLayout Padding="15" VerticalOptions="End">
+                                <VerticalStackLayout Padding="15" VerticalOptions="End" ZIndex="4">
                                     <Label Text="{Binding Place.Name}" 
                                            FontSize="22" 
                                            FontAttributes="Bold"
-                                           TextColor="White" />
+                                           TextColor="White"/>
                                     <Label Text="{Binding Place.ShortDescription}" 
                                            FontSize="14"
                                            TextColor="White"
