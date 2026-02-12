@@ -42,7 +42,7 @@ namespace TartuTouristGuide.Data
                     Name = "Estonian National Museum (ERM)",
                     Category = "History",
                     ShortDescription = "Large modern museum dedicated to Estonia's history, culture, and traditions.",
-                    FullDescription = "Interactive exhibitions cover Estonian history, minorities, and daily life in an impressive contemporary building. Closed 2026: Jun 23-24, Dec 24-26, Dec 28 & 31, Jan 1 2027.",
+                    FullDescription = "Interactive exhibitions cover Estonian history, minorities, and daily life in an impressive contemporary building.",
                     Image = "HistoryCategory/estoniannationalmuseum.png",
                     Hours = "Mon: Closed\nTue–Sun 10:00–18:00",
                     Address = "Muuseumi tee 2, 60532 Tartu"
@@ -286,25 +286,113 @@ namespace TartuTouristGuide.Data
                 // Food places Category
                 new Place
                 {
-                    Id = "restaurant-hõlm",
-                    Name = "Restaurant Hõlm",
-                    Category = "Restaurants",
-                    ShortDescription = "Modern Estonian cuisine with local products.",
-                    FullDescription = "Hõlm offers an exceptional gastronomic experience with a menu based on seasonal Estonian ingredients. The chef highlights local culinary traditions with a contemporary touch. The warm atmosphere and attentive service make this restaurant a popular destination for gourmets. Reservation recommended.",
-                    Image = "https://images.unsplash.com/photo-1758648207365-df458d3e83f4?w=1080",
-                    Hours = "Tue-Sat: 12pm-10pm",
-                    Address = "Rüütli 16, 51007 Tartu"
-                },
-                new Place
-                {
                     Id = "cafe-werner",
                     Name = "Café Werner",
                     Category = "Restaurants",
-                    ShortDescription = "Historic café in the heart of the main square.",
-                    FullDescription = "Café Werner has been an institution in Tartu since 1898. This elegant café offers a selection of homemade pastries, quality coffees and light dishes. The interior preserves the charm of yesteryear with its chandeliers and antique furniture. It's the perfect place for a coffee break while admiring the animation of Town Hall Square.",
-                    Image = "https://images.unsplash.com/photo-1769867967096-e31141e37d49?w=1080",
-                    Hours = "Daily: 9am-9pm",
-                    Address = "Ülikooli 11, 51003 Tartu"
+                    ShortDescription = "Historic café founded in 1890, famous for cakes, pastries, and student atmosphere.",
+                    FullDescription = "Café Werner is a historic spot established in 1890, renowned for its delicious cakes, pastries, and lively student vibe in Tartu city center. It's popular all day for breakfast, coffee, or afternoon snacks in a cozy setting.",
+                    Image = "FoodPlacesCategory/coffeewerner.png",
+                    Hours = "Mon-Fri: 7:30am-9:30pm\nSat-Sun: 9am-9:30pm",
+                    Address = "Ülikooli tn 11, 51003 Tartu"
+                },
+                new Place
+                {
+                    Id = "restaurant-aparaat",
+                    Name = "Restaurant Aparaat",
+                    Category = "Restaurants",
+                    ShortDescription = "Modern cuisine in a former creative factory Aparaaditehas.",
+                    FullDescription = "Restaurant Aparaat offers contemporary dishes in an industrial setting within the old Aparaaditehas creative factory. Its trendy decor and innovative plates make it a top spot in Tartu.",
+                    Image = "FoodPlacesCategory/restaurantaparaat.png",
+                    Hours = "Mon-Thu: 12pm-11pm\nFri-Sat: 12pm-12am\nSun: 12pm-6pm",
+                    Address = "Kastani tn 42, 50410 Tartu"
+                },
+                new Place
+                {
+                    Id = "la-dolce-vita",
+                    Name = "La Dolce Vita",
+                    Category = "Restaurants",
+                    ShortDescription = "Popular Italian spot specializing in pizzas and pastas.",
+                    FullDescription = "La Dolce Vita is a bustling Italian restaurant known for authentic pizzas and pastas. It's often full on weekends, so reservations are advised for this Tartu favorite.",
+                    Image = "FoodPlacesCategory/ladolcevita.png",
+                    Hours = "Mon-Thu: 11:30am-11pm\nFri-Sat: 11:30am-12am\nSun: 12pm-11pm",
+                    Address = "Kompanii tn 10, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "zone-aparaaditehas",
+                    Name = "Zone Aparaaditehas",
+                    Category = "Restaurants",
+                    ShortDescription = "Former factory turned creative hub with restaurants, cafés, and bars.",
+                    FullDescription = "Zone Aparaaditehas is a vibrant converted factory area featuring multiple restaurants, cafés, and bars. It's lively in the evenings, perfect for sampling various cuisines in one spot.",
+                    Image = "FoodPlacesCategory/zoneaparaaditehas.png",
+                    Hours = "Mon-Fri: 10am-6pm\nSat: 11am-4pm",
+                    Address = "Kastani tn 42, 50410 Tartu"
+                },
+                new Place
+                {
+                    Id = "crepp",
+                    Name = "CREPP",
+                    Category = "Restaurants",
+                    ShortDescription = "Cozy French café famous for large salads and sweet/savory crêpes.",
+                    FullDescription = "CREPP is a comfortable French-style café in Tartu's old town, renowned for its generous salads and both sweet and savory crêpes in a welcoming atmosphere.",
+                    Image = "FoodPlacesCategory/crepp.png",
+                    Hours = "Mon-Thu: 11:30am-10pm\nFri: 11:30am-11pm\nSat: 11am-11pm\nSun: 11am-8pm",
+                    Address = "Rüütli tn 16, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "pierre",
+                    Name = "PIERRE",
+                    Category = "Restaurants",
+                    ShortDescription = "Charming café-restaurant on town hall square with French-inspired dishes.",
+                    FullDescription = "PIERRE is a delightful café-restaurant on Tartu's town hall square, serving French-inspired plates, chocolate cakes, and truffles in a warm Parisian ambiance.",
+                    Image = "FoodPlacesCategory/pierre.png",
+                    Hours = "Mon-Thu: 8am-9pm\nFri: 8am-11pm\nSat-Sun: 10am-11pm",
+                    Address = "Raekoja plats 12, 51004 Tartu"
+                },
+                new Place
+                {
+                    Id = "gunpowder-cellar-püssirohukelder",
+                    Name = "Gunpowder Cellar (Püssirohukelder)",
+                    Category = "Restaurants",
+                    ShortDescription = "Cozy pub in historic gunpowder cellar with hearty pub food.",
+                    FullDescription = "Gunpowder Cellar (Püssirohukelder) is a warm restaurant and beer bar in a historic brick-vaulted gunpowder cellar, offering hearty pub cuisine.",
+                    Image = "FoodPlacesCategory/gunpowdercellar.png",
+                    Hours = "Mon-Tue: 12pm-10pm\nWed-Sat: 12pm-1am\nSun: 12pm-10pm",
+                    Address = "Lossi 28, 51003 Tartu"
+                },
+                new Place
+                {
+                    Id = "hansa-tall-hoov",
+                    Name = "Hansa Tall & Hansa Hoov",
+                    Category = "Restaurants",
+                    ShortDescription = "Iconic gastronomic complex in historic 1870s building.",
+                    FullDescription = "Hansa Tall & Hansa Hoov is an emblematic culinary and event complex in a renovated 1870s building. Hansa Tall offers rustic Hanseatic Estonian dishes; Hansa Hoov features lively courtyard events.",
+                    Image = "FoodPlacesCategory/hansatall.png",
+                    Hours = "Mon: 12pm-9pm\nTue-Thu: 8am-9pm\nFri-Sat: 8am-11pm\nSun: 8am-7pm",
+                    Address = "Turu tn 27a, 50106 Tartu"
+                },
+                new Place
+                {
+                    Id = "restaurant-munchen-weihenstephaner-wirtshaus",
+                    Name = "Restaurant München - Weihenstephaner Wirtshaus",
+                    Category = "Restaurants",
+                    ShortDescription = "Authentic Bavarian restaurant with German classics and Weihenstephaner beers.",
+                    FullDescription = "Restaurant München - Weihenstephaner Wirtshaus serves traditional German dishes like schnitzels, sausages, and goulash with Weihenstephaner beers in a cozy setting near Tartu University.",
+                    Image = "FoodPlacesCategory/munchenweihenstephanerwirtshaus.png",
+                    Hours = "Mon-Thu: 12pm-11pm\nFri-Sat: 12pm-12am\nSun: 12pm-9pm",
+                    Address = "Küütri tn 2, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "chez-andre",
+                    Name = "Chez Andre",
+                    Category = "Restaurants",
+                    ShortDescription = "Elegant gourmet spot blending European classics and international influences.",
+                    FullDescription = "Chez André is an upscale restaurant in central Tartu offering innovative European dishes like brisket, popcorn chicken salads, and pork belly in a refined, cozy ambiance.",
+                    Image = "FoodPlacesCategory/chezandre.png",
+                    Hours = "Mon-Thu: 12pm-11pm\nFri-Sat: 12pm-12am\nSun: 3pm-9pm",
+                    Address = "Küütri tn 3, 51007 Tartu"
                 }
             };
         }

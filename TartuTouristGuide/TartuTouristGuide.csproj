@@ -107,7 +107,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Resources\Images\Entertainment\" />
-	  <Folder Include="Resources\Images\FoodPlacesCategory\" />
 	  <Folder Include="Resources\Images\RelaxationCategory\" />
 	  <Folder Include="Resources\Images\Tartu101Category\" />
 	</ItemGroup>
