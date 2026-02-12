@@ -14,6 +14,8 @@ namespace TartuTouristGuide.ViewModels
         private string _progressText = string.Empty;
         private string _visitedText = string.Empty;
         private Color _progressColor = Color.FromArgb("#3b82f6");
+        private Color _progressBackgroundColor = Color.FromArgb("#eff6ff");
+        private Color _progressTextColor = Color.FromArgb("#1e3a8a");
 
         public HomeViewModel(VisitedPlacesService visitedService)
         {
@@ -63,6 +65,18 @@ namespace TartuTouristGuide.ViewModels
             set => SetProperty(ref _progressColor, value);
         }
 
+        public Color ProgressBackgroundColor
+        {
+            get => _progressBackgroundColor;
+            set => SetProperty(ref _progressBackgroundColor, value);
+        }
+
+        public Color ProgressTextColor
+        {
+            get => _progressTextColor;
+            set => SetProperty(ref _progressTextColor, value);
+        }
+
         public ICommand NavigateToCategoryCommand { get; }
         public ICommand NavigateToRewardsCommand { get; }
         public ICommand NavigateToTartu101Command { get; }
@@ -76,10 +90,21 @@ namespace TartuTouristGuide.ViewModels
             ProgressText = $"{percentage}%";
             VisitedText = $"{VisitedCount} / {TotalPlaces} places visited";
 
-            // Barre dorée si tout est visité
-            ProgressColor = (VisitedCount == TotalPlaces && TotalPlaces > 0)
-                ? Color.FromArgb("#fbbf24") // Doré
-                : Color.FromArgb("#3b82f6"); // Bleu normal
+            // Style doré si tout est visité (100%)
+            if (VisitedCount == TotalPlaces && TotalPlaces > 0)
+            {
+                // Fond doré avec dégradé
+                ProgressBackgroundColor = Color.FromArgb("#fbbf24"); // Fond doré
+                ProgressColor = Color.FromArgb("#ffffff"); // Barre blanche
+                ProgressTextColor = Color.FromArgb("#78350f"); // Texte marron foncé
+            }
+            else
+            {
+                // Style normal bleu
+                ProgressBackgroundColor = Color.FromArgb("#eff6ff"); // Fond bleu clair
+                ProgressColor = Color.FromArgb("#3b82f6"); // Barre bleue
+                ProgressTextColor = Color.FromArgb("#1e3a8a"); // Texte bleu foncé
+            }
         }
 
         private async Task NavigateToCategory(string category)

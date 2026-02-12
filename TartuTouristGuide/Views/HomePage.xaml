@@ -145,17 +145,26 @@
                 </Border>
             </VerticalStackLayout>
 
-            <!-- Progress Section -->
-            <Border Stroke="#eff6ff" StrokeThickness="0" Background="#eff6ff" StrokeShape="RoundRectangle 10" Padding="20">
+            <!-- Progress Section - STYLE DORÉ À 100% -->
+            <Border Stroke="{Binding ProgressBackgroundColor}" 
+                    StrokeThickness="0" 
+                    Background="{Binding ProgressBackgroundColor}" 
+                    StrokeShape="RoundRectangle 10" 
+                    Padding="20">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Opacity="0.1" Offset="0,2" Radius="8" />
+                </Border.Shadow>
                 <VerticalStackLayout Spacing="10">
                     <Grid>
                         <Label Text="Discovery Progress" 
                                FontSize="20" 
                                FontAttributes="Bold"
+                               TextColor="{Binding ProgressTextColor}"
                                HorizontalOptions="Start" />
                         <Label Text="{Binding ProgressText}"
                                FontSize="24" 
                                FontAttributes="Bold"
+                               TextColor="{Binding ProgressTextColor}"
                                HorizontalOptions="End" />
                     </Grid>
                     <ProgressBar Progress="{Binding ProgressValue}"
@@ -163,7 +172,8 @@
                                  HeightRequest="12" />
                     <Label Text="{Binding VisitedText}"
                            FontSize="14"
-                           TextColor="#6b7280" />
+                           TextColor="{Binding ProgressTextColor}"
+                           Opacity="0.8" />
                 </VerticalStackLayout>
             </Border>
 

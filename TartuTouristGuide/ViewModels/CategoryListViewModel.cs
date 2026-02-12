@@ -7,17 +7,24 @@ using TartuTouristGuide.Services;
 
 namespace TartuTouristGuide.ViewModels
 {
+    public class PlaceItem
+    {
+        public Place Place { get; set; } = new Place();
+        public bool IsVisited { get; set; }
+    }
+
     public class CategoryListViewModel : BaseViewModel, IQueryAttributable
     {
         private readonly VisitedPlacesService _visitedService;
         private string _category = string.Empty;
         private string _countText = string.Empty;
-        private ObservableCollection<Place> _buildings = new();
+        private ObservableCollection<PlaceItem> _placeItems = new();
 
         public CategoryListViewModel(VisitedPlacesService visitedService)
         {
             _visitedService = visitedService;
-            NavigateToPlaceCommand = new Command<string>(async (buildingId) => await NavigateToPlace(buildingId));
+            NavigateToPlaceCommand = new Command<string>(async (placeId) => await NavigateToPlace(placeId));
+            ResetCategoryCommand = new Command(async () => await ResetCategory());
         }
 
         public string Category
@@ -38,13 +45,14 @@ namespace TartuTouristGuide.ViewModels
             set => SetProperty(ref _countText, value);
         }
 
-        public ObservableCollection<Place> Places
+        public ObservableCollection<PlaceItem> PlaceItems
         {
-            get => _buildings;
-            set => SetProperty(ref _buildings, value);
+            get => _placeItems;
+            set => SetProperty(ref _placeItems, value);
         }
 
         public ICommand NavigateToPlaceCommand { get; }
+        public ICommand ResetCategoryCommand { get; }
 
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
@@ -54,18 +62,67 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        public void RefreshPlaces()
+        {
+            LoadPlaces();
+        }
+
         private void LoadPlaces()
         {
             var allPlaces = PlacesData.GetPlaces();
             var categoryPlaces = allPlaces.Where(b => b.Category == Category).ToList();
+            var visitedPlaces = _visitedService.GetVisitedPlaces();
 
-            Places = new ObservableCollection<Place>(categoryPlaces);
+            var items = new ObservableCollection<PlaceItem>();
+            foreach (var place in categoryPlaces)
+            {
+                items.Add(new PlaceItem
+                {
+                    Place = place,
+                    IsVisited = visitedPlaces.Contains(place.Id)
+                });
+            }
+
+            PlaceItems = items;
             CountText = $"{categoryPlaces.Count} {(categoryPlaces.Count > 1 ? "places" : "place")} to discover";
         }
 
-        private async Task NavigateToPlace(string buildingId)
+        private async Task ResetCategory()
         {
-            await Shell.Current.GoToAsync($"PlaceDetailPage?id={buildingId}");
+            bool confirm = await Application.Current.MainPage.DisplayAlert(
+                "Reset Category",
+                $"Are you sure you want to mark all places in {Category} as not visited?",
+                "Yes, Reset",
+                "Cancel"
+            );
+
+            if (confirm)
+            {
+                var allPlaces = PlacesData.GetPlaces();
+                var categoryPlaces = allPlaces.Where(b => b.Category == Category).ToList();
+
+                foreach (var place in categoryPlaces)
+                {
+                    if (_visitedService.IsVisited(place.Id))
+                    {
+                        _visitedService.ToggleVisited(place.Id);
+                    }
+                }
+
+                // Rafraîchir la liste
+                LoadPlaces();
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "Reset Complete",
+                    $"All places in {Category} have been reset.",
+                    "OK"
+                );
+            }
+        }
+
+        private async Task NavigateToPlace(string placeId)
+        {
+            await Shell.Current.GoToAsync($"PlaceDetailPage?id={placeId}");
         }
     }
 }

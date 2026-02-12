@@ -2,10 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:TartuTouristGuide.ViewModels"
-             xmlns:models="clr-namespace:TartuTouristGuide.Models"
              x:Class="TartuTouristGuide.Views.CategoryListPage"
              x:DataType="vm:CategoryListViewModel"
              Title="{Binding Category}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="🔄 Reset" 
+                     Command="{Binding ResetCategoryCommand}"
+                     Order="Primary" 
+                     Priority="0" />
+    </ContentPage.ToolbarItems>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
@@ -22,9 +28,9 @@
             </VerticalStackLayout>
 
             <!-- Places List -->
-            <CollectionView ItemsSource="{Binding Places}">
+            <CollectionView ItemsSource="{Binding PlaceItems}">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Place">
+                    <DataTemplate x:DataType="vm:PlaceItem">
                         <Border StrokeShape="RoundRectangle 10" 
                                 StrokeThickness="0" 
                                 Margin="0,0,0,15">
@@ -34,19 +40,34 @@
                             <Border.GestureRecognizers>
                                 <TapGestureRecognizer 
                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CategoryListViewModel}}, Path=NavigateToPlaceCommand}"
-                                    CommandParameter="{Binding Id}" />
+                                    CommandParameter="{Binding Place.Id}" />
                             </Border.GestureRecognizers>
                             <Grid>
-                                <Image Source="{Binding Image}" 
+                                <Image Source="{Binding Place.Image}" 
                                        Aspect="AspectFill"
                                        HeightRequest="200" />
                                 <BoxView Color="Black" Opacity="0.3" />
+
+                                <!-- Visited Badge (Top Right Corner) -->
+                                <Border BackgroundColor="#22c55e"
+                                        StrokeShape="RoundRectangle 8"
+                                        Padding="10,5"
+                                        Margin="10"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Start"
+                                        IsVisible="{Binding IsVisited}">
+                                    <Label Text="✓ Visited"
+                                           TextColor="White"
+                                           FontSize="12"
+                                           FontAttributes="Bold" />
+                                </Border>
+
                                 <VerticalStackLayout Padding="15" VerticalOptions="End">
-                                    <Label Text="{Binding Name}" 
+                                    <Label Text="{Binding Place.Name}" 
                                            FontSize="22" 
                                            FontAttributes="Bold"
                                            TextColor="White" />
-                                    <Label Text="{Binding ShortDescription}" 
+                                    <Label Text="{Binding Place.ShortDescription}" 
                                            FontSize="14"
                                            TextColor="White"
                                            Opacity="0.9" />

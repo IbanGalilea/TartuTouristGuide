@@ -76,12 +76,13 @@ namespace TartuTouristGuide.ViewModels
             {
                 _isVisited = _visitedService.IsVisited(_placeId);
                 OnPropertyChanged(nameof(IsVisited));
-                UpdateVisitedText(); // Initialiser le texte dès le début
+                UpdateVisitedText();
             }
         }
 
         private void ToggleVisited()
         {
+            bool wasVisited = _isVisited;
             _visitedService.ToggleVisited(_placeId);
 
             // Mettre à jour l'état
@@ -89,8 +90,14 @@ namespace TartuTouristGuide.ViewModels
             OnPropertyChanged(nameof(IsVisited));
             UpdateVisitedText();
 
-            // Vérifier les nouveaux succès débloqués
-            CheckForNewRewards();
+            // Vérifier les nouveaux succès débloqués seulement si on vient de marquer comme visité
+            if (!wasVisited && _isVisited)
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    await CheckForNewRewards();
+                });
+            }
         }
 
         private void UpdateVisitedText()
@@ -99,40 +106,59 @@ namespace TartuTouristGuide.ViewModels
             CheckboxColor = _isVisited ? Color.FromArgb("#22c55e") : Color.FromArgb("#3b82f6");
         }
 
-        private async void CheckForNewRewards()
+        private async Task CheckForNewRewards()
         {
-            var rewards = RewardsData.GetRewards();
-            var visitedPlaces = _visitedService.GetVisitedPlaces();
-
-            foreach (var reward in rewards)
+            try
             {
-                bool wasUnlockedBefore = reward.RequiredPlaceIds
-                    .Where(id => id != _placeId)
-                    .All(id => visitedPlaces.Contains(id));
+                var rewards = RewardsData.GetRewards();
+                var visitedPlaces = _visitedService.GetVisitedPlaces();
 
-                bool isUnlockedNow = reward.RequiredPlaceIds
-                    .All(id => visitedPlaces.Contains(id));
-
-                // Si le succès vient d'être débloqué
-                if (!wasUnlockedBefore && isUnlockedNow)
+                foreach (var reward in rewards)
                 {
-                    await ShowRewardUnlockedPopup(reward);
+                    // Vérifier si le succès vient d'être débloqué
+                    bool wasUnlockedBefore = reward.RequiredPlaceIds
+                        .Where(id => id != _placeId)
+                        .All(id => visitedPlaces.Contains(id));
+
+                    bool isUnlockedNow = reward.RequiredPlaceIds
+                        .All(id => visitedPlaces.Contains(id));
+
+                    // Si le succès vient d'être débloqué
+                    if (!wasUnlockedBefore && isUnlockedNow)
+                    {
+                        await ShowRewardUnlockedPopup(reward);
+                        break; // Ne montrer qu'un succès à la fois
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error checking rewards: {ex.Message}");
             }
         }
 
         private async Task ShowRewardUnlockedPopup(Reward reward)
         {
-            bool goToRewards = await Application.Current.MainPage.DisplayAlert(
-                "🏆 Reward Unlocked!",
-                $"{reward.Name}\n\n{reward.Description}",
-                "View Rewards",
-                "Continue Exploring"
-            );
-
-            if (goToRewards)
+            try
             {
-                await Shell.Current.GoToAsync("//HomePage/RewardsPage");
+                if (Application.Current?.MainPage == null)
+                    return;
+
+                bool goToRewards = await Application.Current.MainPage.DisplayAlert(
+                    "🏆 Reward Unlocked!",
+                    $"{reward.Name}\n\n{reward.Description}",
+                    "View Rewards",
+                    "Continue Exploring"
+                );
+
+                if (goToRewards)
+                {
+                    await Shell.Current.GoToAsync("RewardsPage");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error showing popup: {ex.Message}");
             }
         }
 
