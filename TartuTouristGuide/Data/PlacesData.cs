@@ -238,32 +238,87 @@ namespace TartuTouristGuide.Data
                 // Relaxation Category
                 new Place
                 {
-                    Id = "jardin-botanique",
-                    Name = "Tartu Botanical Garden",
+                    Id = "toome-hill-park-toomemagi",
+                    Name = "Toome Hill Park (Toomemägi)",
                     Category = "Relaxation",
-                    ShortDescription = "Green oasis with over 6,500 plant species.",
-                    FullDescription = "The University of Tartu Botanical Garden, founded in 1803, is a true haven of peace. It houses tropical greenhouses, an arboretum and thematic gardens. Visitors can stroll among plants from around the world, including rare and exotic species. It's the perfect place to relax and recharge in an exceptional natural setting.",
-                    Image = "https://images.unsplash.com/photo-1661264047307-4d692250a7ac?w=1080",
-                    Hours = "Daily: 10am-5pm",
-                    Address = "Lai 38/40, 51005 Tartu"
+                    ShortDescription = "Urban wooded hill park perfect for walks, reading, and city/river views.",
+                    FullDescription = "Toome Hill Park (Toomemägi) combines nature, historic ruins, and scenic bridges on a hilltop. Open anytime for strolls, relaxation, and panoramic Tartu views.",
+                    Image = "RelaxationCategory/toomehillpark.png",
+                    Hours = "24h/24",
+                    Address = "Lossi 15b, 51003 Tartu"
                 },
                 new Place
                 {
-                    Id = "parc-toomemagi",
-                    Name = "Toomemägi Park",
+                    Id = "aura-water-centre",
+                    Name = "Aura Water Centre",
                     Category = "Relaxation",
-                    ShortDescription = "Historic hill with shaded trails and monuments.",
-                    FullDescription = "Toomemägi Park is Tartu's green lung, located on a historic hill in the heart of the city. This romantic park offers picturesque trails, historic monuments and panoramic views. It's the favorite spot for locals to walk, jog or simply enjoy nature. The park also features sculptures and artistic installations.",
-                    Image = "https://images.unsplash.com/photo-1741004421389-6f225bf38c10?w=1080",
-                    Hours = "Open 24/7",
-                    Address = "Toomemägi, 50090 Tartu"
+                    ShortDescription = "Aquatic center with pools, slides, saunas, and family/sports facilities.",
+                    FullDescription = "Aura Water Centre is popular for relaxation, swimming, and indoor leisure with pools, toboggans, saunas, and wellness areas for families and athletes.",
+                    Image = "RelaxationCategory/aquawatercentre.png",
+                    Hours = "Mon-Thu: 12:00pm-10:00pm\nFri-Sun: 10:00am-10:00pm",
+                    Address = "Turu tn 10, 51004 Tartu"
+                },
+                new Place
+                {
+                    Id = "v-spa-conference-hotel",
+                    Name = "V Spa & Conference Hotel",
+                    Category = "Relaxation",
+                    ShortDescription = "Modern spa in Kvartal mall with saunas, pools, treatments, and massages.",
+                    FullDescription = "V Spa & Conference Hotel offers numerous saunas, pools, spa care, and massages—ideal for wellness breaks after city sightseeing.",
+                    Image = "RelaxationCategory/vspaconferencehotel.png",
+                    Hours = "Mon-Sun: 9:00am-9:00pm",
+                    Address = "Riia tn 2, 51004 Tartu"
+                },
+                new Place
+                {
+                    Id = "botanical-garden-outdoor-area",
+                    Name = "Botanical Garden – Outdoor Area",
+                    Category = "Relaxation",
+                    ShortDescription = "Outdoor botanical garden area for calm walks and flora observation.",
+                    FullDescription = "The outdoor zone of Tartu Botanical Garden provides a serene setting for strolling, plant viewing, and relaxing amid greenery.",
+                    Image = "RelaxationCategory/botanicalgardenoutdoorarea.png",
+                    Hours = "Mon-Sun: 7:00am-9:00pm",
+                    Address = "Lai tn 38, 51005 Tartu"
+                },
+                new Place
+                {
+                    Id = "emajogi-river-banks",
+                    Name = "Emajõgi River Banks",
+                    Category = "Relaxation",
+                    ShortDescription = "Riverside promenade with benches, paths, and seasonal tourist cruises.",
+                    FullDescription = "Emajõgi River Banks feature landscaped walkways for jogging, sunset strolls, picnics, and occasional tourist boat cruises.",
+                    Image = "RelaxationCategory/emajogiriverbanks.png",
+                    Hours = "Always open",
+                    Address = "Along Emajõgi River, Tartu"
+                },
+                new Place
+                {
+                    Id = "massaz-massage-lomi-lomi-kahuna",
+                    Name = "Massaaz Massage Lomi Lomi KaHuna",
+                    Category = "Relaxation",
+                    ShortDescription = "Studio specializing in Hawaiian Lomi Lomi KaHuna massage for deep healing.",
+                    FullDescription = "Massaaž Massage Lomi Lomi KaHuna (Studio Pure Wellness) offers fluid 1-2h Hawaiian massages using forearms, oils, and rhythmic moves to release physical/emotional blockages, boost circulation, flexibility, and harmony in ALOHA spirit.",
+                    Image = "RelaxationCategory/massazlomicomikahuna.png",
+                    Hours = "By appointment",
+                    Address = "Nõmme t1, 50303 Tartu"
+                },
+                new Place
+                {
+                    Id = "raamatupood-biblioteek",
+                    Name = "Raamatupood Biblioteek",
+                    Category = "Relaxation",
+                    ShortDescription = "Cozy independent bookstore in former Aparaaditehas factory.",
+                    FullDescription = "Raamatupood Biblioteek, opened in 2021 via crowdfunding (180+ backers), offers curated new/used books (Estonian lit, essays, comics, imports), Chado tea, coffee, wine, and events like reading clubs.",
+                    Image = "RelaxationCategory/raamatupoodbiblioteek.png",
+                    Hours = "Mon-Fri: 10:00am-6:00pm\nSat: 11:00am-4:00pm\nSun: Closed",
+                    Address = "Kastani tn 42, 50410 Tartu"
                 },
                 
                 // Entertainment Category
                 new Place
                 {
                     Id = "ahhaa-science-centre",
-                    Name = "Centre scientifique AHHAA",
+                    Name = "AHHAA Science Centre",
                     Category = "Entertainment",
                     ShortDescription = "Large interactive science center with hands-on experiments, exhibits, shows, and planetarium.",
                     FullDescription = "AHHAA Science Centre offers practical experiments, interactive exhibits, shows, and a planetarium suitable for kids and adults alike, with plenty of fun educational activities.",
@@ -274,7 +329,7 @@ namespace TartuTouristGuide.Data
                 new Place
                 {
                     Id = "vanemuine-theater",
-                    Name = "Théâtre Vanemuine",
+                    Name = "Vanemuine Theater",
                     Category = "Entertainment",
                     ShortDescription = "Tartu's main theater for operas, ballets, plays, and musicals.",
                     FullDescription = "Vanemuine Theater, Tartu's principal venue, features operas, ballets, plays, and musicals. Some shows have English surtitles; tickets available online or on-site.",
@@ -285,7 +340,7 @@ namespace TartuTouristGuide.Data
                 new Place
                 {
                     Id = "tartu-toy-museum",
-                    Name = "Musée du Jouet de Tartu",
+                    Name = "Tartu Toy Museum",
                     Category = "Entertainment",
                     ShortDescription = "Fun museum showcasing Estonian and international toys with play areas for kids.",
                     FullDescription = "Tartu Toy Museum displays Estonian and global toys, plus kids' play zones, exhibits, workshops, and regular animations—ideal for families.",
@@ -296,7 +351,7 @@ namespace TartuTouristGuide.Data
                 new Place
                 {
                     Id = "a-le-coq-beer-museum",
-                    Name = "Musée de la Bière A. Le Coq",
+                    Name = "A. Le Coq Beer Museum",
                     Category = "Entertainment",
                     ShortDescription = "Museum tracing A. Le Coq brewery and Estonian beer history.",
                     FullDescription = "A. Le Coq Beer Museum explores the brewery's history and Estonia's beer heritage. Guided tours often end with adult tastings.",
@@ -307,7 +362,7 @@ namespace TartuTouristGuide.Data
                 new Place
                 {
                     Id = "ice-age-centre",
-                    Name = "Centre de l’Âge de Glace (Ice Age Centre)",
+                    Name = "Ice Age Centre",
                     Category = "Entertainment",
                     ShortDescription = "Themed center near Tartu on Ice Age, prehistoric animals, and climate.",
                     FullDescription = "Ice Age Centre features interactive exhibits and models on the Ice Age, prehistoric fauna, and climate—great for families.",
@@ -318,7 +373,7 @@ namespace TartuTouristGuide.Data
                 new Place
                 {
                     Id = "devil-bridge-kuradisild",
-                    Name = "Pont du Diable (Kuradisild)",
+                    Name = "Devil's Bridge (Kuradisild)",
                     Category = "Entertainment",
                     ShortDescription = "Stone bridge with local legends on Toome Hill.",
                     FullDescription = "Devil's Bridge (Kuradisild) is a historic stone bridge tied to local legends, ideal for walks and photos, especially evenings on Toome Hill.",
@@ -370,12 +425,34 @@ namespace TartuTouristGuide.Data
                     Hours = "Mon-Tue: Closed\nWed-Thu: 2:00pm-11:00pm\nFri: 2:00pm-12:00am\nSat: 12:00pm-12:00am\nSun: 12:00pm-10:00pm",
                     Address = "Võru tn 55F, 50111 Tartu"
                 },
+                new Place
+                {
+                    Id = "lange-motokeskus",
+                    Name = "Lange Motokeskus",
+                    Category = "Entertainment",
+                    ShortDescription = "Largest Nordic moto center near Tartu for extreme and family motorsports.",
+                    FullDescription = "Lange Motokeskus, just 9km from Tartu, features a professional motocross track (winter closed), international-standard outdoor karting, and indoor hall with 16 silent electric Sodi RSX karts on a 300m track with live timing screens.",
+                    Image = "EntertainmentCategory/langemotokeskus.png",
+                    Hours = "Mon-Tue: Closed\nWed-Sun: 12:00pm-9:00pm",
+                    Address = "Pärnavälja tee 1, Lange, 62115 Tartu maakond"
+                },
+                new Place
+                {
+                    Id = "lounakeskuse-seikluspark",
+                    Name = "Lõunakeskuse Seikluspark",
+                    Category = "Entertainment",
+                    ShortDescription = "Indoor treetop adventure park above ice rink in largest southern Estonia mall.",
+                    FullDescription = "Lõunakeskuse Seikluspark is the indoor version of Tartu Adventure Park in Lõunakeskus mall. Suspended over the ice rink, it has 3 progressive courses (33 elements total) with suspended bridges, nets, and a thrilling zipline across the rink.",
+                    Image = "EntertainmentCategory/lounakeskuseseikluspark.png",
+                    Hours = "Mon-Fri: 4:00pm-8:00pm\nSat: 12:00pm-8:00pm\nSun: 12:00pm-7:00pm",
+                    Address = "Ringtee 75g, 51014 Tartu"
+                },
                 
                 // Food places Category
                 new Place
                 {
                     Id = "cafe-werner",
-                    Name = "Café Werner",
+                    Name = "Werner coffee",
                     Category = "Restaurants",
                     ShortDescription = "Historic café founded in 1890, famous for cakes, pastries, and student atmosphere.",
                     FullDescription = "Café Werner is a historic spot established in 1890, renowned for its delicious cakes, pastries, and lively student vibe in Tartu city center. It's popular all day for breakfast, coffee, or afternoon snacks in a cozy setting.",
@@ -386,7 +463,7 @@ namespace TartuTouristGuide.Data
                 new Place
                 {
                     Id = "restaurant-aparaat",
-                    Name = "Restaurant Aparaat",
+                    Name = "Aparaat Restaurant",
                     Category = "Restaurants",
                     ShortDescription = "Modern cuisine in a former creative factory Aparaaditehas.",
                     FullDescription = "Restaurant Aparaat offers contemporary dishes in an industrial setting within the old Aparaaditehas creative factory. Its trendy decor and innovative plates make it a top spot in Tartu.",

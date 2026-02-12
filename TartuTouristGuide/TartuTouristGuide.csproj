@@ -117,6 +117,24 @@
 		<MauiImage Include="Resources\Images\FoodPlacesCategory\restaurantaparaat.png" />
 		<None Remove="Resources\Images\FoodPlacesCategory\zoneaparaaditehas.png" />
 		<MauiImage Include="Resources\Images\FoodPlacesCategory\zoneaparaaditehas.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\lounakeskuseseikluspark.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\lounakeskuseseikluspark.png" />
+		<None Remove="Resources\Images\EntertainmentCategory\langemotokeskus.png" />
+		<MauiImage Include="Resources\Images\EntertainmentCategory\langemotokeskus.png" />
+		<None Remove="Resources\Images\RelaxationCategory\bordsrivièreemajõgi.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\emajogiriverbanks.png" />
+		<None Remove="Resources\Images\RelaxationCategory\centreaquatiqueaura.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\aquawatercentre.png" />
+		<None Remove="Resources\Images\RelaxationCategory\jardinbotaniqueexterieur.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\botanicalgardenoutdoorarea.png" />
+		<None Remove="Resources\Images\RelaxationCategory\lomilomikahuna.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\massazlomicomikahuna.png" />
+		<None Remove="Resources\Images\RelaxationCategory\parctoomehill.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\toomehillpark.png" />
+		<None Remove="Resources\Images\RelaxationCategory\vspaconferencehotel.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\vspaconferencehotel.png" />
+		<None Remove="Resources\Images\RelaxationCategory\maamatupoodbiblioteek.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\raamatupoodbiblioteek.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -146,8 +164,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\RelaxationCategory\" />
-	  <Folder Include="Resources\Images\Tartu101Category\" />
+	  <Folder Include="Resources\Images\RewardPicture\" />
 	</ItemGroup>
 
 </Project>
