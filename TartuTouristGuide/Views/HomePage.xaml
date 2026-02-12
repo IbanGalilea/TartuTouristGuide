@@ -64,7 +64,7 @@
                                    FontSize="22" 
                                    FontAttributes="Bold"
                                    TextColor="White" />
-                            <Label Text="Discover the historical heritage" 
+                            <Label Text="Discover all the museums and historical sites"
                                    FontSize="14"
                                    TextColor="White" 
                                    Opacity="0.9" />
@@ -112,7 +112,7 @@
                                    FontSize="22" 
                                    FontAttributes="Bold"
                                    TextColor="White" />
-                            <Label Text="Museums and cultural attractions" 
+                            <Label Text="Fun things to do in Tartu"
                                    FontSize="14"
                                    TextColor="White" 
                                    Opacity="0.9" />
@@ -120,7 +120,7 @@
                     </Grid>
                 </Border>
 
-                <!-- Restaurants -->
+                <!-- Food Places -->
                 <Border Stroke="#f97316" StrokeThickness="1" Background="#f97316" StrokeShape="RoundRectangle 10">
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="Restaurants" />
@@ -132,7 +132,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Text="🍽️" FontSize="40" VerticalOptions="Center" />
                         <VerticalStackLayout Grid.Column="1" Spacing="5">
-                            <Label Text="Restaurants" 
+                            <Label Text="Food Places" 
                                    FontSize="22" 
                                    FontAttributes="Bold"
                                    TextColor="White" />

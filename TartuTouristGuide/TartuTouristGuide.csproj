@@ -44,6 +44,26 @@
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiImage Include="Resources\Images\HistoryCategory\baermuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\churchstjohn.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\estonianagriculturemuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\estonianavationmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\estonianliterarymuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\estoniannationalmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\estoniannationalmuseumdefencecollege.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\kgbcellsmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\nineteencenturytartucitizenmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\oskarlutshousemuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\papagoikeskus.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\ruinscathedraltartu.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\songfestivalmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\tartuartmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\tartuautomuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\tartucitymuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\tartuobservatory.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\tartusportmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\tartuuniversityartmuseum.png" />
+		<MauiImage Include="Resources\Images\HistoryCategory\typaletterpresspaperartcenter.png" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -83,6 +103,12 @@
 	  <MauiXaml Update="Views\Tartu101Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\Entertainment\" />
+	  <Folder Include="Resources\Images\RelaxationCategory\" />
+	  <Folder Include="Resources\Images\Tartu101Category\" />
 	</ItemGroup>
 
 </Project>
