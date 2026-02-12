@@ -1,0 +1,445 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\viewmodels\\categorylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\viewmodels\\categorylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\viewmodels\\placedetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\viewmodels\\placedetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\data\\placesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\data\\placesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\models\\place.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\models\\place.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\categorylistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\categorylistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\categorylistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\categorylistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\tartu101page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\tartu101page.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\tartu101page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\tartu101page.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\placedetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\placedetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\rewardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\rewardspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\rewardspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\rewardspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\views\\placedetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\views\\placedetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\viewmodels\\rewardsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\viewmodels\\rewardsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\services\\visitedbuildingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\services\\visitedbuildingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\models\\reward.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\models\\reward.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\data\\rewardsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\data\\rewardsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ibang\\AppData\\Local\\Temp\\tmpE8B.tmp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|c:\\stage\\2emeannee\\tartutouristguide\\tartutouristguide\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4FC9B201-35C3-4945-AF93-4DA07830EB5A}|TartuTouristGuide\\TartuTouristGuide.csproj|solutionrelative:tartutouristguide\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryListViewModel.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\CategoryListViewModel.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\ViewModels\\CategoryListViewModel.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\CategoryListViewModel.cs",
+              "RelativeToolTip": "TartuTouristGuide\\ViewModels\\CategoryListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:13:15.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlaceDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\PlaceDetailViewModel.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\ViewModels\\PlaceDetailViewModel.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\PlaceDetailViewModel.cs",
+              "RelativeToolTip": "TartuTouristGuide\\ViewModels\\PlaceDetailViewModel.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:12:36.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlacesData.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Data\\PlacesData.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Data\\PlacesData.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Data\\PlacesData.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Data\\PlacesData.cs",
+              "ViewState": "AgIAAPYAAAAAAAAAAADwvyUBAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:09:45.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "TartuTouristGuide\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:11:57.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\ViewModels\\HomeViewModel.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "TartuTouristGuide\\ViewModels\\HomeViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBYAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T12:41:52.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\HomePage.xaml.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\HomePage.xaml.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\HomePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:15:54.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\HomePage.xaml",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\HomePage.xaml",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\HomePage.xaml",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\HomePage.xaml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAKwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-10T12:44:51.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Place.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Models\\Place.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Models\\Place.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Models\\Place.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Models\\Place.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAjwAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T12:38:43.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryListPage.xaml",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\CategoryListPage.xaml",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\CategoryListPage.xaml",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\CategoryListPage.xaml",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\CategoryListPage.xaml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T08:15:27.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategoryListPage.xaml.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\CategoryListPage.xaml.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\CategoryListPage.xaml.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\CategoryListPage.xaml.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\CategoryListPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:15:32.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\AppShell.xaml.cs",
+              "RelativeToolTip": "TartuTouristGuide\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:16:23.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\MauiProgram.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\MauiProgram.cs",
+              "RelativeToolTip": "TartuTouristGuide\\MauiProgram.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:16:34.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Tartu101Page.xaml.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\Tartu101Page.xaml.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\Tartu101Page.xaml.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\Tartu101Page.xaml.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\Tartu101Page.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T08:00:33.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PlaceDetailPage.xaml",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\PlaceDetailPage.xaml",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\PlaceDetailPage.xaml",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\PlaceDetailPage.xaml",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\PlaceDetailPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T08:14:57.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RewardsPage.xaml",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\RewardsPage.xaml",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\RewardsPage.xaml",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\RewardsPage.xaml",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\RewardsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-10T12:45:54.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Tartu101Page.xaml",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\Tartu101Page.xaml",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\Tartu101Page.xaml",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\Tartu101Page.xaml",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\Tartu101Page.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T07:51:26.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\AppShell.xaml",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\AppShell.xaml",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\AppShell.xaml",
+              "RelativeToolTip": "TartuTouristGuide\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T08:16:18.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RewardsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\RewardsPage.xaml.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\RewardsPage.xaml.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\RewardsPage.xaml.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\RewardsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:16:08.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlaceDetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\PlaceDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Views\\PlaceDetailPage.xaml.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Views\\PlaceDetailPage.xaml.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Views\\PlaceDetailPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:15:06.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RewardsViewModel.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\RewardsViewModel.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\ViewModels\\RewardsViewModel.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\ViewModels\\RewardsViewModel.cs",
+              "RelativeToolTip": "TartuTouristGuide\\ViewModels\\RewardsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T12:43:21.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "VisitedBuildingsService.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Services\\VisitedBuildingsService.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Services\\VisitedBuildingsService.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Services\\VisitedBuildingsService.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Services\\VisitedBuildingsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:11:32.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Reward.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Models\\Reward.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Models\\Reward.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Models\\Reward.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Models\\Reward.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T12:39:00.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RewardsData.cs",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Data\\RewardsData.cs",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\Data\\RewardsData.cs",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\Data\\RewardsData.cs",
+              "RelativeToolTip": "TartuTouristGuide\\Data\\RewardsData.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAADwv0QAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T08:08:29.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "tmpE8B.tmp.cs",
+              "DocumentMoniker": "C:\\Users\\ibang\\AppData\\Local\\Temp\\tmpE8B.tmp.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\ibang\\AppData\\Local\\Temp\\tmpE8B.tmp.cs",
+              "ToolTip": "C:\\Users\\ibang\\AppData\\Local\\Temp\\tmpE8B.tmp.cs",
+              "RelativeToolTip": "..\\..\\..\\Users\\ibang\\AppData\\Local\\Temp\\tmpE8B.tmp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T11:40:36.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\MainPage.xaml",
+              "RelativeDocumentMoniker": "TartuTouristGuide\\MainPage.xaml",
+              "ToolTip": "C:\\Stage\\2emeAnnee\\TartuTouristGuide\\TartuTouristGuide\\MainPage.xaml",
+              "RelativeToolTip": "TartuTouristGuide\\MainPage.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-10T12:08:05.062Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

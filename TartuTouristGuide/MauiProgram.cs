@@ -32,6 +32,7 @@ namespace TartuTouristGuide
             builder.Services.AddTransient<CategoryListPage>();
             builder.Services.AddTransient<PlaceDetailPage>();
             builder.Services.AddTransient<RewardsPage>();
+            builder.Services.AddTransient<Tartu101Page>();
 
 #if DEBUG
             builder.Logging.AddDebug();

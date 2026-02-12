@@ -22,30 +22,32 @@
                        TextColor="#4b5563" />
             </VerticalStackLayout>
 
-            <!-- Progress Section -->
-            <Border Stroke="#eff6ff" StrokeThickness="0" Background="#eff6ff" StrokeShape="RoundRectangle 10" Padding="20">
-                <VerticalStackLayout Spacing="10">
-                    <Grid>
-                        <Label Text="Discovery Progress" 
-                               FontSize="20" 
-                               FontAttributes="Bold"
-                               HorizontalOptions="Start" />
-                        <Label Text="{Binding ProgressText}"
-                               FontSize="24" 
-                               FontAttributes="Bold"
-                               HorizontalOptions="End" />
-                    </Grid>
-                    <ProgressBar Progress="{Binding ProgressValue}"
-                                 ProgressColor="#3b82f6"
-                                 HeightRequest="12" />
-                    <Label Text="{Binding VisitedText}"
-                           FontSize="14"
-                           TextColor="#6b7280" />
-                </VerticalStackLayout>
-            </Border>
-
             <!-- Categories -->
             <VerticalStackLayout Spacing="15">
+                <!-- Tartu 101 -->
+                <Border Stroke="#ef4444" StrokeThickness="1" Background="#ef4444" StrokeShape="RoundRectangle 10">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToTartu101Command}" />
+                    </Border.GestureRecognizers>
+                    <Grid Padding="20" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="📚" FontSize="40" VerticalOptions="Center" />
+                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                            <Label Text="Tartu 101" 
+                                   FontSize="22" 
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+                            <Label Text="Essential information for your stay" 
+                                   FontSize="14"
+                                   TextColor="White" 
+                                   Opacity="0.9" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
                 <!-- History -->
                 <Border Stroke="#3b82f6" StrokeThickness="1" Background="#3b82f6" StrokeShape="RoundRectangle 10">
                     <Border.GestureRecognizers>
@@ -142,6 +144,28 @@
                     </Grid>
                 </Border>
             </VerticalStackLayout>
+
+            <!-- Progress Section -->
+            <Border Stroke="#eff6ff" StrokeThickness="0" Background="#eff6ff" StrokeShape="RoundRectangle 10" Padding="20">
+                <VerticalStackLayout Spacing="10">
+                    <Grid>
+                        <Label Text="Discovery Progress" 
+                               FontSize="20" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start" />
+                        <Label Text="{Binding ProgressText}"
+                               FontSize="24" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="End" />
+                    </Grid>
+                    <ProgressBar Progress="{Binding ProgressValue}"
+                                 ProgressColor="{Binding ProgressColor}"
+                                 HeightRequest="12" />
+                    <Label Text="{Binding VisitedText}"
+                           FontSize="14"
+                           TextColor="#6b7280" />
+                </VerticalStackLayout>
+            </Border>
 
             <!-- Rewards Button -->
             <Button Text="View my rewards"

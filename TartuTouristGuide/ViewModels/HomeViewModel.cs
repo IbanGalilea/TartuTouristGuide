@@ -13,6 +13,7 @@ namespace TartuTouristGuide.ViewModels
         private double _progressValue;
         private string _progressText = string.Empty;
         private string _visitedText = string.Empty;
+        private Color _progressColor = Color.FromArgb("#3b82f6");
 
         public HomeViewModel(VisitedPlacesService visitedService)
         {
@@ -21,6 +22,7 @@ namespace TartuTouristGuide.ViewModels
 
             NavigateToCategoryCommand = new Command<string>(async (category) => await NavigateToCategory(category));
             NavigateToRewardsCommand = new Command(async () => await NavigateToRewards());
+            NavigateToTartu101Command = new Command(async () => await NavigateToTartu101());
 
             RefreshProgress();
         }
@@ -55,8 +57,15 @@ namespace TartuTouristGuide.ViewModels
             set => SetProperty(ref _visitedText, value);
         }
 
+        public Color ProgressColor
+        {
+            get => _progressColor;
+            set => SetProperty(ref _progressColor, value);
+        }
+
         public ICommand NavigateToCategoryCommand { get; }
         public ICommand NavigateToRewardsCommand { get; }
+        public ICommand NavigateToTartu101Command { get; }
 
         public void RefreshProgress()
         {
@@ -66,6 +75,11 @@ namespace TartuTouristGuide.ViewModels
             ProgressValue = percentage / 100.0;
             ProgressText = $"{percentage}%";
             VisitedText = $"{VisitedCount} / {TotalPlaces} places visited";
+
+            // Barre dorée si tout est visité
+            ProgressColor = (VisitedCount == TotalPlaces && TotalPlaces > 0)
+                ? Color.FromArgb("#fbbf24") // Doré
+                : Color.FromArgb("#3b82f6"); // Bleu normal
         }
 
         private async Task NavigateToCategory(string category)
@@ -76,6 +90,11 @@ namespace TartuTouristGuide.ViewModels
         private async Task NavigateToRewards()
         {
             await Shell.Current.GoToAsync("RewardsPage");
+        }
+
+        private async Task NavigateToTartu101()
+        {
+            await Shell.Current.GoToAsync("Tartu101Page");
         }
     }
 }
