@@ -72,6 +72,7 @@ namespace TartuTouristGuide.ViewModels
             var allPlaces = PlacesData.GetPlaces();
             var categoryPlaces = allPlaces.Where(b => b.Category == Category).ToList();
             var visitedPlaces = _visitedService.GetVisitedPlaces();
+            var visitedInCategory = categoryPlaces.Count(p => visitedPlaces.Contains(p.Id));
 
             var items = new ObservableCollection<PlaceItem>();
             foreach (var place in categoryPlaces)
@@ -84,7 +85,7 @@ namespace TartuTouristGuide.ViewModels
             }
 
             PlaceItems = items;
-            CountText = $"{categoryPlaces.Count} {(categoryPlaces.Count > 1 ? "places" : "place")} to discover";
+            CountText = $"{visitedInCategory}/{categoryPlaces.Count} {(categoryPlaces.Count > 1 ? "places" : "place")} discovered";
         }
 
         private async Task ResetCategory()
