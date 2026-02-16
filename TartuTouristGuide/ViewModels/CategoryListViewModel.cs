@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows.Input;
 using Microsoft.Maui.Controls;
 using TartuTouristGuide.Data;
@@ -70,7 +71,7 @@ namespace TartuTouristGuide.ViewModels
         private void LoadPlaces()
         {
             var allPlaces = PlacesData.GetPlaces();
-            var categoryPlaces = allPlaces.Where(b => b.Category == Category).ToList();
+            var categoryPlaces = allPlaces.Where(p => p.Category == Category).ToList();
             var visitedPlaces = _visitedService.GetVisitedPlaces();
             var visitedInCategory = categoryPlaces.Count(p => visitedPlaces.Contains(p.Id));
 
@@ -100,7 +101,7 @@ namespace TartuTouristGuide.ViewModels
             if (confirm)
             {
                 var allPlaces = PlacesData.GetPlaces();
-                var categoryPlaces = allPlaces.Where(b => b.Category == Category).ToList();
+                var categoryPlaces = allPlaces.Where(p => p.Category == Category).ToList();
 
                 foreach (var place in categoryPlaces)
                 {
@@ -110,7 +111,6 @@ namespace TartuTouristGuide.ViewModels
                     }
                 }
 
-                // Rafraîchir la liste
                 LoadPlaces();
 
                 await Application.Current.MainPage.DisplayAlert(

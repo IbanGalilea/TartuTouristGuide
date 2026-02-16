@@ -27,15 +27,19 @@
                        TextColor="#6b7280" />
             </VerticalStackLayout>
 
-            <!-- Places List -->
-            <CollectionView ItemsSource="{Binding PlaceItems}">
+            <!-- Places List avec virtualisation -->
+            <CollectionView ItemsSource="{Binding PlaceItems}"
+                            RemainingItemsThreshold="3"
+                            ItemSizingStrategy="MeasureFirstItem"
+                            HeightRequest="600">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="vm:PlaceItem">
                         <Border StrokeShape="RoundRectangle 10" 
                                 StrokeThickness="0" 
                                 Margin="0,0,0,15">
+                            <!-- Ombre optimisée -->
                             <Border.Shadow>
-                                <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
+                                <Shadow Brush="Black" Opacity="0.1" Offset="0,2" Radius="4" />
                             </Border.Shadow>
                             <Border.GestureRecognizers>
                                 <TapGestureRecognizer 
@@ -43,6 +47,7 @@
                                     CommandParameter="{Binding Place.Id}" />
                             </Border.GestureRecognizers>
                             <Grid>
+                                <!-- Image optimisée (CacheValidity supprimé) -->
                                 <Image Source="{Binding Place.Image}" 
                                        Aspect="AspectFill"
                                        ZIndex="2"
