@@ -80,7 +80,7 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
-        private void ToggleVisited()
+        private async void ToggleVisited()
         {
             bool wasVisited = _isVisited;
             _visitedService.ToggleVisited(_placeId);
@@ -93,10 +93,7 @@ namespace TartuTouristGuide.ViewModels
             // Vérifier les nouveaux succès débloqués seulement si on vient de marquer comme visité
             if (!wasVisited && _isVisited)
             {
-                MainThread.BeginInvokeOnMainThread(async () =>
-                {
-                    await CheckForNewRewards();
-                });
+                await CheckForNewRewards();
             }
         }
 
@@ -113,17 +110,20 @@ namespace TartuTouristGuide.ViewModels
                 var rewards = RewardsData.GetRewards();
                 var visitedPlaces = _visitedService.GetVisitedPlaces();
 
+                // Créer une liste SANS le lieu actuel (état "avant")
+                var visitedBeforeClick = visitedPlaces.Where(id => id != _placeId).ToList();
+
                 foreach (var reward in rewards)
                 {
-                    // Vérifier si le succès vient d'être débloqué
+                    // Était débloqué AVANT le clic ?
                     bool wasUnlockedBefore = reward.RequiredPlaceIds
-                        .Where(id => id != _placeId)
-                        .All(id => visitedPlaces.Contains(id));
+                        .All(id => visitedBeforeClick.Contains(id));
 
+                    // Est débloqué MAINTENANT (avec le lieu actuel) ?
                     bool isUnlockedNow = reward.RequiredPlaceIds
                         .All(id => visitedPlaces.Contains(id));
 
-                    // Si le succès vient d'être débloqué
+                    // Si le succès vient d'être débloqué (pas avant, mais maintenant oui)
                     if (!wasUnlockedBefore && isUnlockedNow)
                     {
                         await ShowRewardUnlockedPopup(reward);
@@ -141,9 +141,6 @@ namespace TartuTouristGuide.ViewModels
         {
             try
             {
-                if (Application.Current?.MainPage == null)
-                    return;
-
                 bool goToRewards = await Application.Current.MainPage.DisplayAlert(
                     "🏆 Reward Unlocked!",
                     $"{reward.Name}\n\n{reward.Description}",

@@ -15,6 +15,15 @@ namespace TartuTouristGuide.Data
             {
                 new Reward
                 {
+                    Id = "test-succes",
+                    Name = "Test des Succès",
+                    Description = "C'est un test des succès, pour tester si ça marche.",
+                    Image = "https://cdn.discordapp.com/attachments/1298945878584856610/1450805130231418952/20251215_195633.jpg?ex=6993a1d1&is=69925051&hm=b6c3ca3726994f6db01963e0a02425e3fe9287be74d44cf04c645506aeafee0a&",
+                    RequiredPlaceIds = new List<string> { "ruines-cathedral-tartu" },
+                    Category = "History"
+                },
+                new Reward
+                {
                     Id = "historien-amateur",
                     Name = "Amateur Historian",
                     Description = "You've visited all the historic sites in Tartu! The history of this thousand-year-old city holds no secrets for you.",
