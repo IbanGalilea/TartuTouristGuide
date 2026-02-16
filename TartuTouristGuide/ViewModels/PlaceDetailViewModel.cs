@@ -177,7 +177,7 @@ namespace TartuTouristGuide.ViewModels
 
         private async Task GoBack()
         {
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("../..");
         }
     }
 }
