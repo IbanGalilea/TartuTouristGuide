@@ -53,13 +53,19 @@
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="History" />
                     </Border.GestureRecognizers>
-                    <Grid Padding="20" ColumnSpacing="15">
+                    <Grid Padding="20" ColumnSpacing="15" RowSpacing="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="🏛️" FontSize="40" VerticalOptions="Center" />
-                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Text="🏛️" FontSize="40" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Center" />
+                        
+                        <VerticalStackLayout Grid.Column="1" Grid.Row="0" Spacing="5">
                             <Label Text="History" 
                                    FontSize="22" 
                                    FontAttributes="Bold"
@@ -69,6 +75,15 @@
                                    TextColor="White" 
                                    Opacity="0.9" />
                         </VerticalStackLayout>
+                        
+                        <Label Text="{Binding HistoryStats}"
+                               Grid.Column="1" Grid.Row="1"
+                               FontSize="12"
+                               FontAttributes="Italic"
+                               TextColor="White"
+                               Opacity="0.85"
+                               HorizontalOptions="End"
+                               VerticalOptions="End" />
                     </Grid>
                 </Border>
 
@@ -77,13 +92,19 @@
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="Relaxation" />
                     </Border.GestureRecognizers>
-                    <Grid Padding="20" ColumnSpacing="15">
+                    <Grid Padding="20" ColumnSpacing="15" RowSpacing="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="🌿" FontSize="40" VerticalOptions="Center" />
-                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Text="🌿" FontSize="40" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Center" />
+                        
+                        <VerticalStackLayout Grid.Column="1" Grid.Row="0" Spacing="5">
                             <Label Text="Relaxation" 
                                    FontSize="22" 
                                    FontAttributes="Bold"
@@ -93,6 +114,15 @@
                                    TextColor="White" 
                                    Opacity="0.9" />
                         </VerticalStackLayout>
+                        
+                        <Label Text="{Binding RelaxationStats}"
+                               Grid.Column="1" Grid.Row="1"
+                               FontSize="12"
+                               FontAttributes="Italic"
+                               TextColor="White"
+                               Opacity="0.85"
+                               HorizontalOptions="End"
+                               VerticalOptions="End" />
                     </Grid>
                 </Border>
 
@@ -101,13 +131,19 @@
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="Entertainment" />
                     </Border.GestureRecognizers>
-                    <Grid Padding="20" ColumnSpacing="15">
+                    <Grid Padding="20" ColumnSpacing="15" RowSpacing="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="✨" FontSize="40" VerticalOptions="Center" />
-                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Text="✨" FontSize="40" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Center" />
+                        
+                        <VerticalStackLayout Grid.Column="1" Grid.Row="0" Spacing="5">
                             <Label Text="Entertainment" 
                                    FontSize="22" 
                                    FontAttributes="Bold"
@@ -117,6 +153,15 @@
                                    TextColor="White" 
                                    Opacity="0.9" />
                         </VerticalStackLayout>
+                        
+                        <Label Text="{Binding EntertainmentStats}"
+                               Grid.Column="1" Grid.Row="1"
+                               FontSize="12"
+                               FontAttributes="Italic"
+                               TextColor="White"
+                               Opacity="0.85"
+                               HorizontalOptions="End"
+                               VerticalOptions="End" />
                     </Grid>
                 </Border>
 
@@ -125,13 +170,19 @@
                     <Border.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateToCategoryCommand}" CommandParameter="Restaurants" />
                     </Border.GestureRecognizers>
-                    <Grid Padding="20" ColumnSpacing="15">
+                    <Grid Padding="20" ColumnSpacing="15" RowSpacing="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="🍽️" FontSize="40" VerticalOptions="Center" />
-                        <VerticalStackLayout Grid.Column="1" Spacing="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Label Text="🍽️" FontSize="40" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Center" />
+                        
+                        <VerticalStackLayout Grid.Column="1" Grid.Row="0" Spacing="5">
                             <Label Text="Food Places" 
                                    FontSize="22" 
                                    FontAttributes="Bold"
@@ -141,6 +192,15 @@
                                    TextColor="White" 
                                    Opacity="0.9" />
                         </VerticalStackLayout>
+                        
+                        <Label Text="{Binding RestaurantsStats}"
+                               Grid.Column="1" Grid.Row="1"
+                               FontSize="12"
+                               FontAttributes="Italic"
+                               TextColor="White"
+                               Opacity="0.85"
+                               HorizontalOptions="End"
+                               VerticalOptions="End" />
                     </Grid>
                 </Border>
             </VerticalStackLayout>

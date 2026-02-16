@@ -17,6 +17,12 @@ namespace TartuTouristGuide.ViewModels
         private Color _progressBackgroundColor = Color.FromArgb("#eff6ff");
         private Color _progressTextColor = Color.FromArgb("#1e3a8a");
 
+        // Nouvelles propriétés pour les statistiques par catégorie
+        private string _historyStats = string.Empty;
+        private string _relaxationStats = string.Empty;
+        private string _entertainmentStats = string.Empty;
+        private string _restaurantsStats = string.Empty;
+
         public HomeViewModel(VisitedPlacesService visitedService)
         {
             _visitedService = visitedService;
@@ -77,6 +83,30 @@ namespace TartuTouristGuide.ViewModels
             set => SetProperty(ref _progressTextColor, value);
         }
 
+        public string HistoryStats
+        {
+            get => _historyStats;
+            set => SetProperty(ref _historyStats, value);
+        }
+
+        public string RelaxationStats
+        {
+            get => _relaxationStats;
+            set => SetProperty(ref _relaxationStats, value);
+        }
+
+        public string EntertainmentStats
+        {
+            get => _entertainmentStats;
+            set => SetProperty(ref _entertainmentStats, value);
+        }
+
+        public string RestaurantsStats
+        {
+            get => _restaurantsStats;
+            set => SetProperty(ref _restaurantsStats, value);
+        }
+
         public ICommand NavigateToCategoryCommand { get; }
         public ICommand NavigateToRewardsCommand { get; }
         public ICommand NavigateToTartu101Command { get; }
@@ -105,6 +135,27 @@ namespace TartuTouristGuide.ViewModels
                 ProgressColor = Color.FromArgb("#3b82f6"); // Barre bleue
                 ProgressTextColor = Color.FromArgb("#1e3a8a"); // Texte bleu foncé
             }
+
+            // Calculer les statistiques par catégorie
+            RefreshCategoryStats();
+        }
+
+        private void RefreshCategoryStats()
+        {
+            var allPlaces = PlacesData.GetPlaces();
+            var visitedPlaceIds = _visitedService.GetVisitedPlaces();
+
+            HistoryStats = GetCategoryStats(allPlaces, visitedPlaceIds, "History");
+            RelaxationStats = GetCategoryStats(allPlaces, visitedPlaceIds, "Relaxation");
+            EntertainmentStats = GetCategoryStats(allPlaces, visitedPlaceIds, "Entertainment");
+            RestaurantsStats = GetCategoryStats(allPlaces, visitedPlaceIds, "Restaurants");
+        }
+
+        private string GetCategoryStats(List<Models.Place> allPlaces, List<string> visitedPlaceIds, string category)
+        {
+            var categoryPlaces = allPlaces.Where(p => p.Category == category).ToList();
+            var visitedInCategory = categoryPlaces.Count(p => visitedPlaceIds.Contains(p.Id));
+            return $"{visitedInCategory}/{categoryPlaces.Count} places visited";
         }
 
         private async Task NavigateToCategory(string category)
