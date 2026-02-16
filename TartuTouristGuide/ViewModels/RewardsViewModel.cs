@@ -69,7 +69,7 @@ namespace TartuTouristGuide.ViewModels
                     {
                         Reward = reward,
                         IsUnlocked = isUnlocked,
-                        DisplayText = isUnlocked ? reward.Description : $"🔒 Visit {reward.RequiredPlaceIds.Count} places in the {reward.Category} to unlock",
+                        DisplayText = isUnlocked ? reward.Description : $"🔒 Visit all {reward.RequiredPlaceIds.Count} places in the {reward.Category} category to unlock",
                         OverlayOpacity = isUnlocked ? 0.3 : 0.7
                     });
                 }
