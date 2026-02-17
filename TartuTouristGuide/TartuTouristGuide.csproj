@@ -135,6 +135,21 @@
 		<MauiImage Include="Resources\Images\RelaxationCategory\vspaconferencehotel.png" />
 		<None Remove="Resources\Images\RelaxationCategory\maamatupoodbiblioteek.png" />
 		<MauiImage Include="Resources\Images\RelaxationCategory\raamatupoodbiblioteek.png" />
+		<None Remove="Resources\Images\FoodPlacesCategory\kolmtilli.png" />
+		<MauiImage Include="Resources\Images\FoodPlacesCategory\kolmtilli.png" />
+		<None Remove="Resources\Images\RelaxationCategory\floatingtartu.png" />
+		<MauiImage Include="Resources\Images\RelaxationCategory\floatingtartu.png" />
+		<None Remove="Resources\Images\RewardPicture\TestRewards.jpg" />
+		<None Remove="Resources\Images\RewardPicture\amateurhistorian.png" />
+		<MauiImage Include="Resources\Images\RewardPicture\amateurhistorian.png" />
+		<None Remove="Resources\Images\RewardPicture\cultureenthusiast.png" />
+		<MauiImage Include="Resources\Images\RewardPicture\cultureenthusiast.png" />
+		<None Remove="Resources\Images\RewardPicture\masteroftartu.png" />
+		<MauiImage Include="Resources\Images\RewardPicture\masteroftartu.png" />
+		<None Remove="Resources\Images\RewardPicture\tartugourmet.png" />
+		<MauiImage Include="Resources\Images\RewardPicture\tartugourmet.png" />
+		<None Remove="Resources\Images\RewardPicture\zenexplorer.png" />
+		<MauiImage Include="Resources\Images\RewardPicture\zenexplorer.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -161,10 +176,6 @@
 	  <MauiXaml Update="Views\Tartu101Page.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Resources\Images\RewardPicture\" />
 	</ItemGroup>
 
 </Project>

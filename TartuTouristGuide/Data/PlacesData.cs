@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TartuTouristGuide.Models;
+﻿using TartuTouristGuide.Models;
 
 namespace TartuTouristGuide.Data
 {
@@ -15,7 +10,7 @@ namespace TartuTouristGuide.Data
             {
                 // History Category
                 new Place
-                {
+                {   
                     Id = "ruines-cathedral-tartu",
                     Name = "Ruins of Tartu Cathedral (Toomkirik)",
                     Category = "History",
@@ -313,6 +308,17 @@ namespace TartuTouristGuide.Data
                     Hours = "Mon-Fri: 10:00am-6:00pm\nSat: 11:00am-4:00pm\nSun: Closed",
                     Address = "Kastani tn 42, 50410 Tartu"
                 },
+                new Place
+                {
+                    Id = "floating-tartu",
+                    Name = "Floating Tartu",
+                    Category = "Relaxation",
+                    ShortDescription = "Estonia's only sensory deprivation floatation studio for deep relaxation.",
+                    FullDescription = "Floating Tartu offers unique zero-gravity floatation in a closed pod filled with body-temperature water saturated with 500kg Epsom salt (magnesium). Lights off, total silence for 60-90 min: brain off mode, stress completely evacuated.",
+                    Image = "RelaxationCategory/floatingtartu.png",
+                    Hours = "Mon-Fri: 10:00am-9:00pm\nSat: 11:00am-6:00pm\nSun: Closed",
+                    Address = "Kastani tn 64a, 50410 Tartu"
+                },
                 
                 // Entertainment Category
                 new Place
@@ -558,6 +564,17 @@ namespace TartuTouristGuide.Data
                     Image = "FoodPlacesCategory/chezandre.png",
                     Hours = "Mon-Thu: 12pm-11pm\nFri-Sat: 12pm-12am\nSun: 3pm-9pm",
                     Address = "Küütri tn 3, 51007 Tartu"
+                },
+                new Place
+                {
+                    Id = "kolm-tilli",
+                    Name = "Kolm Tilli",
+                    Category = "Restaurants",
+                    ShortDescription = "Street food restaurant inspired by world cuisines in Aparaaditehas factory.",
+                    FullDescription = "Kolm Tilli offers open-kitchen street food with Italian pizzas from authentic oven, juicy burgers, fresh salads, cocktails, and events/concerts in relaxed vibe.",
+                    Image = "FoodCategory/kolmtilli.png",
+                    Hours = "Mon-Tue: 9:00am-10:00pm\nWed-Thu: 9:00am-11:00pm\nFri: 9:00am-12:00am\nSat: 10:00am-12:00am\nSun: 10:00am-10:00pm",
+                    Address = "Kastani tn 42, 50410 Tartu"
                 }
             };
         }

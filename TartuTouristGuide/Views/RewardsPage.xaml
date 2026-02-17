@@ -37,9 +37,10 @@
                             <Grid>
                                 <Image Source="{Binding Reward.Image}" 
                                        Aspect="AspectFill"
+                                       ZIndex="2"
                                        HeightRequest="200" />
-                                <BoxView Color="Black" Opacity="{Binding OverlayOpacity}" />
-                                <VerticalStackLayout Padding="15" VerticalOptions="End">
+                                <BoxView Color="Black" ZIndex="1" Opacity="{Binding OverlayOpacity}" />
+                                <VerticalStackLayout Padding="15" VerticalOptions="End" ZIndex="3">
                                     <Label Text="{Binding Reward.Name}" 
                                            FontSize="22" 
                                            FontAttributes="Bold"
