@@ -37,7 +37,6 @@
                         <Border StrokeShape="RoundRectangle 10" 
                                 StrokeThickness="0" 
                                 Margin="0,0,0,15">
-                            <!-- Ombre optimisée -->
                             <Border.Shadow>
                                 <Shadow Brush="Black" Opacity="0.1" Offset="0,2" Radius="4" />
                             </Border.Shadow>
@@ -47,7 +46,6 @@
                                     CommandParameter="{Binding Place.Id}" />
                             </Border.GestureRecognizers>
                             <Grid>
-                                <!-- Image optimisée (CacheValidity supprimé) -->
                                 <Image Source="{Binding Place.Image}" 
                                        Aspect="AspectFill"
                                        ZIndex="2"
@@ -55,7 +53,6 @@
                                        HeightRequest="200" />
                                 <BoxView Color="Black" Opacity="0.3" ZIndex="1" />
 
-                                <!-- Visited Badge (Top Right Corner) -->
                                 <Border BackgroundColor="#22c55e"
                                         StrokeShape="RoundRectangle 8"
                                         Padding="10,5"
