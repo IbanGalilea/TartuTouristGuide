@@ -7,6 +7,7 @@ namespace TartuTouristGuide
 {
     public static class MauiProgram
     {
+        // Entry point: configures dependency injection and app services
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
@@ -18,16 +19,16 @@ namespace TartuTouristGuide
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            // Register Services (Singleton pour partager l'état)
+            // Services: Singleton = shared state across app (visited places persist)
             builder.Services.AddSingleton<VisitedPlacesService>();
 
-            // Register ViewModels (Transient pour créer une nouvelle instance à chaque fois)
+            // ViewModels: Transient = new instance each time (fresh data)
             builder.Services.AddTransient<HomeViewModel>();
             builder.Services.AddTransient<CategoryListViewModel>();
             builder.Services.AddTransient<PlaceDetailViewModel>();
             builder.Services.AddTransient<RewardsViewModel>();
 
-            // Register Views (Transient)
+            // Pages: Transient = new page instance each navigation
             builder.Services.AddTransient<HomePage>();
             builder.Services.AddTransient<CategoryListPage>();
             builder.Services.AddTransient<PlaceDetailPage>();
@@ -35,6 +36,7 @@ namespace TartuTouristGuide
             builder.Services.AddTransient<Tartu101Page>();
 
 #if DEBUG
+            // Debug logging only in development builds
             builder.Logging.AddDebug();
 #endif
 

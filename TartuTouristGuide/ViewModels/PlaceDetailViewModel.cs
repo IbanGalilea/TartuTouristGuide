@@ -6,6 +6,7 @@ using TartuTouristGuide.Services;
 
 namespace TartuTouristGuide.ViewModels
 {
+    // ViewModel for displaying details of a single place and handling visited toggle
     public class PlaceDetailViewModel : BaseViewModel, IQueryAttributable
     {
         private readonly VisitedPlacesService _visitedService;
@@ -15,6 +16,7 @@ namespace TartuTouristGuide.ViewModels
         private string _visitedText = string.Empty;
         private Color _checkboxColor = Color.FromArgb("#3b82f6");
 
+        // Initializes commands for toggle, maps, and navigation
         public PlaceDetailViewModel(VisitedPlacesService visitedService)
         {
             _visitedService = visitedService;
@@ -54,10 +56,12 @@ namespace TartuTouristGuide.ViewModels
             set => SetProperty(ref _checkboxColor, value);
         }
 
+        // Commands used by the place detail page
         public ICommand ToggleVisitedCommand { get; }
         public ICommand OpenMapsCommand { get; }
         public ICommand BackCommand { get; }
 
+        // Loads place data from navigation query parameter
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
             if (query.ContainsKey("id"))
@@ -67,6 +71,7 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        // Loads the specific place and its visited status
         private void LoadPlace()
         {
             var allPlaces = PlacesData.GetPlaces();
@@ -80,54 +85,47 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        // Toggles visited status and checks for new rewards if unlocked
         private async void ToggleVisited()
         {
             bool wasVisited = _isVisited;
             _visitedService.ToggleVisited(_placeId);
 
-            // Mettre à jour l'état
             _isVisited = _visitedService.IsVisited(_placeId);
             OnPropertyChanged(nameof(IsVisited));
             UpdateVisitedText();
 
-            // Vérifier les nouveaux succès débloqués seulement si on vient de marquer comme visité
             if (!wasVisited && _isVisited)
             {
                 await CheckForNewRewards();
             }
         }
 
+        // Updates button text and checkbox color based on visited status
         private void UpdateVisitedText()
         {
             VisitedText = _isVisited ? "Place visited" : "Mark as VISITED";
             CheckboxColor = _isVisited ? Color.FromArgb("#22c55e") : Color.FromArgb("#3b82f6");
         }
 
+        // Checks if toggling this place unlocked any new rewards
         private async Task CheckForNewRewards()
         {
             try
             {
                 var rewards = RewardsData.GetRewards();
                 var visitedPlaces = _visitedService.GetVisitedPlaces();
-
-                // Créer une liste SANS le lieu actuel (état "avant")
                 var visitedBeforeClick = visitedPlaces.Where(id => id != _placeId).ToList();
 
                 foreach (var reward in rewards)
                 {
-                    // Était débloqué AVANT le clic ?
-                    bool wasUnlockedBefore = reward.RequiredPlaceIds
-                        .All(id => visitedBeforeClick.Contains(id));
+                    bool wasUnlockedBefore = reward.RequiredPlaceIds.All(id => visitedBeforeClick.Contains(id));
+                    bool isUnlockedNow = reward.RequiredPlaceIds.All(id => visitedPlaces.Contains(id));
 
-                    // Est débloqué MAINTENANT (avec le lieu actuel) ?
-                    bool isUnlockedNow = reward.RequiredPlaceIds
-                        .All(id => visitedPlaces.Contains(id));
-
-                    // Si le succès vient d'être débloqué (pas avant, mais maintenant oui)
                     if (!wasUnlockedBefore && isUnlockedNow)
                     {
                         await ShowRewardUnlockedPopup(reward);
-                        break; // Ne montrer qu'un succès à la fois
+                        break;
                     }
                 }
             }
@@ -137,6 +135,7 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        // Shows popup when a new reward is unlocked
         private async Task ShowRewardUnlockedPopup(Reward reward)
         {
             try
@@ -159,6 +158,7 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        // Opens Google Maps with the place's address
         private async Task OpenMaps()
         {
             if (Place != null)
@@ -175,6 +175,7 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        // Navigates back to previous page
         private async Task GoBack()
         {
             await Shell.Current.GoToAsync("../..");

@@ -5,6 +5,7 @@ using TartuTouristGuide.Services;
 
 namespace TartuTouristGuide.ViewModels
 {
+    // ViewModel for the home screen: handles global progress and navigation
     public class HomeViewModel : BaseViewModel
     {
         private readonly VisitedPlacesService _visitedService;
@@ -17,12 +18,13 @@ namespace TartuTouristGuide.ViewModels
         private Color _progressBackgroundColor = Color.FromArgb("#eff6ff");
         private Color _progressTextColor = Color.FromArgb("#1e3a8a");
 
-        // Nouvelles propriétés pour les statistiques par catégorie
+        // Stats per category shown on the home screen
         private string _historyStats = string.Empty;
         private string _relaxationStats = string.Empty;
         private string _entertainmentStats = string.Empty;
         private string _restaurantsStats = string.Empty;
 
+        // Initializes commands and loads global place count
         public HomeViewModel(VisitedPlacesService visitedService)
         {
             _visitedService = visitedService;
@@ -107,10 +109,12 @@ namespace TartuTouristGuide.ViewModels
             set => SetProperty(ref _restaurantsStats, value);
         }
 
+        // Commands used by the home page buttons
         public ICommand NavigateToCategoryCommand { get; }
         public ICommand NavigateToRewardsCommand { get; }
         public ICommand NavigateToTartu101Command { get; }
 
+        // Recalculates global progress and updates colors and texts
         public void RefreshProgress()
         {
             VisitedCount = _visitedService.GetVisitedCount();
@@ -120,26 +124,26 @@ namespace TartuTouristGuide.ViewModels
             ProgressText = $"{percentage}%";
             VisitedText = $"{VisitedCount} / {TotalPlaces} places visited";
 
-            // Style doré si tout est visité (100%)
+            // Golden style when all places are visited
             if (VisitedCount == TotalPlaces && TotalPlaces > 0)
             {
-                // Fond doré avec dégradé
-                ProgressBackgroundColor = Color.FromArgb("#fbbf24"); // Fond doré
-                ProgressColor = Color.FromArgb("#ffffff"); // Barre blanche
-                ProgressTextColor = Color.FromArgb("#78350f"); // Texte marron foncé
+                ProgressBackgroundColor = Color.FromArgb("#fbbf24");
+                ProgressColor = Color.FromArgb("#ffffff");
+                ProgressTextColor = Color.FromArgb("#78350f");
             }
             else
             {
-                // Style normal bleu
-                ProgressBackgroundColor = Color.FromArgb("#eff6ff"); // Fond bleu clair
-                ProgressColor = Color.FromArgb("#3b82f6"); // Barre bleue
-                ProgressTextColor = Color.FromArgb("#1e3a8a"); // Texte bleu foncé
+                // Default blue style
+                ProgressBackgroundColor = Color.FromArgb("#eff6ff");
+                ProgressColor = Color.FromArgb("#3b82f6");
+                ProgressTextColor = Color.FromArgb("#1e3a8a");
             }
 
-            // Calculer les statistiques par catégorie
+            // Update per-category statistics
             RefreshCategoryStats();
         }
 
+        // Computes statistics for each category (History, Relaxation, etc.)
         private void RefreshCategoryStats()
         {
             var allPlaces = PlacesData.GetPlaces();
@@ -151,6 +155,7 @@ namespace TartuTouristGuide.ViewModels
             RestaurantsStats = GetCategoryStats(allPlaces, visitedPlaceIds, "Restaurants");
         }
 
+        // Builds the "X/Y places visited" text for a given category
         private string GetCategoryStats(List<Models.Place> allPlaces, List<string> visitedPlaceIds, string category)
         {
             var categoryPlaces = allPlaces.Where(p => p.Category == category).ToList();
@@ -158,6 +163,7 @@ namespace TartuTouristGuide.ViewModels
             return $"{visitedInCategory}/{categoryPlaces.Count} places visited";
         }
 
+        // Navigation helpers for the different sections of the app
         private async Task NavigateToCategory(string category)
         {
             await Shell.Current.GoToAsync($"CategoryListPage?category={category}");

@@ -9,14 +9,19 @@ namespace TartuTouristGuide.Services
 {
     public class VisitedPlacesService
     {
+        // Used to save and load the list of visited places from Preferences
         private const string VisitedKey = "visited_Places";
+
+        // Stores all visited place IDs
         private HashSet<string> _visitedPlaces = new HashSet<string>();
 
+        // Load saved places when the service is created
         public VisitedPlacesService()
         {
             LoadVisitedPlaces();
         }
 
+        // Get the visited places list from local storage
         private void LoadVisitedPlaces()
         {
             try
@@ -30,11 +35,11 @@ namespace TartuTouristGuide.Services
             }
             catch
             {
-                // Si Preferences lève une exception, on initialise proprement la collection
                 _visitedPlaces = new HashSet<string>();
             }
         }
 
+        // Save the updated visited places list to local storage
         private void SaveVisitedPlaces()
         {
             try
@@ -43,10 +48,10 @@ namespace TartuTouristGuide.Services
             }
             catch
             {
-                // Échec d'enregistrement : on ignore pour éviter le plantage en runtime
             }
         }
 
+        // Check if a specific place has been visited
         public bool IsVisited(string PlaceId)
         {
             if (string.IsNullOrWhiteSpace(PlaceId))
@@ -55,27 +60,27 @@ namespace TartuTouristGuide.Services
             return _visitedPlaces.Contains(PlaceId);
         }
 
+        // Add or remove a place from the visited list
         public void ToggleVisited(string PlaceId)
         {
             if (string.IsNullOrWhiteSpace(PlaceId))
                 return;
 
             if (_visitedPlaces.Contains(PlaceId))
-            {
                 _visitedPlaces.Remove(PlaceId);
-            }
             else
-            {
                 _visitedPlaces.Add(PlaceId);
-            }
+
             SaveVisitedPlaces();
         }
 
+        // Get total number of visited places
         public int GetVisitedCount()
         {
             return _visitedPlaces.Count;
         }
 
+        // Get all visited place IDs
         public List<string> GetVisitedPlaces()
         {
             return _visitedPlaces.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();

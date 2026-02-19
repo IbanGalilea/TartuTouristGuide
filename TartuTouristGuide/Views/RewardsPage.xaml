@@ -9,7 +9,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
 
-            <!-- Header -->
+            <!-- Rewards header with unlock count -->
             <VerticalStackLayout Spacing="10">
                 <HorizontalStackLayout Spacing="15">
                     <Label Text="🏆" FontSize="32" />
@@ -24,10 +24,11 @@
                        TextColor="#6b7280" />
             </VerticalStackLayout>
 
-            <!-- Rewards List -->
+            <!-- Scrollable list of all rewards (locked ones are dimmed) -->
             <CollectionView ItemsSource="{Binding RewardItems}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="vm:RewardItem">
+                        <!-- Reward card with image overlay and lock effect -->
                         <Border StrokeShape="RoundRectangle 10" 
                                 StrokeThickness="0" 
                                 Margin="0,0,0,15">
@@ -60,7 +61,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <!-- Encouragement -->
+            <!-- Encouragement message (shows when not all rewards unlocked) -->
             <Border StrokeShape="RoundRectangle 10"
                     Padding="20"
                     Background="#eff6ff"
@@ -71,7 +72,7 @@
                        TextColor="#374151" />
             </Border>
 
-            <!-- Completion Message -->
+            <!-- Completion celebration (shows when all rewards unlocked) -->
             <Border StrokeShape="RoundRectangle 10"
                     Padding="20"
                     Background="#fef3c7"

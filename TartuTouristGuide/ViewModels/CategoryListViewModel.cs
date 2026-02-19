@@ -8,12 +8,14 @@ using TartuTouristGuide.Services;
 
 namespace TartuTouristGuide.ViewModels
 {
+    // Represents a place and its visited state, used for display in lists
     public class PlaceItem
     {
         public Place Place { get; set; } = new Place();
         public bool IsVisited { get; set; }
     }
 
+    // ViewModel for displaying a list of places filtered by category
     public class CategoryListViewModel : BaseViewModel, IQueryAttributable
     {
         private readonly VisitedPlacesService _visitedService;
@@ -21,6 +23,7 @@ namespace TartuTouristGuide.ViewModels
         private string _countText = string.Empty;
         private ObservableCollection<PlaceItem> _placeItems = new();
 
+        // Initializes commands and loads visited places service
         public CategoryListViewModel(VisitedPlacesService visitedService)
         {
             _visitedService = visitedService;
@@ -55,6 +58,7 @@ namespace TartuTouristGuide.ViewModels
         public ICommand NavigateToPlaceCommand { get; }
         public ICommand ResetCategoryCommand { get; }
 
+        // Retrieves the category value passed from navigation
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
             if (query.ContainsKey("category"))
@@ -63,11 +67,13 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        // Reloads the list of places
         public void RefreshPlaces()
         {
             LoadPlaces();
         }
 
+        // Loads and prepares the list of places for the selected category
         private void LoadPlaces()
         {
             var allPlaces = PlacesData.GetPlaces();
@@ -89,6 +95,7 @@ namespace TartuTouristGuide.ViewModels
             CountText = $"{visitedInCategory}/{categoryPlaces.Count} {(categoryPlaces.Count > 1 ? "places" : "place")} discovered";
         }
 
+        // Resets the visited status of all places in the selected category
         private async Task ResetCategory()
         {
             bool confirm = await Application.Current.MainPage.DisplayAlert(
@@ -121,6 +128,7 @@ namespace TartuTouristGuide.ViewModels
             }
         }
 
+        // Navigates to the detail page for a selected place
         private async Task NavigateToPlace(string placeId)
         {
             await Shell.Current.GoToAsync($"PlaceDetailPage?id={placeId}");

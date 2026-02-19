@@ -6,6 +6,7 @@
              x:DataType="vm:CategoryListViewModel"
              Title="{Binding Category}">
 
+    <!-- Reset button in toolbar -->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="🔄 Reset" 
                      Command="{Binding ResetCategoryCommand}"
@@ -16,7 +17,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
 
-            <!-- Header -->
+            <!-- Category header with name and visited count -->
             <VerticalStackLayout Spacing="10">
                 <Label Text="{Binding Category}"
                        FontSize="32"
@@ -27,13 +28,14 @@
                        TextColor="#6b7280" />
             </VerticalStackLayout>
 
-            <!-- Places List avec virtualisation -->
+            <!-- Scrollable list of places with virtualization for performance -->
             <CollectionView ItemsSource="{Binding PlaceItems}"
                             RemainingItemsThreshold="3"
                             ItemSizingStrategy="MeasureFirstItem"
                             HeightRequest="600">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="vm:PlaceItem">
+                        <!-- Card for each place with image overlay and tap navigation -->
                         <Border StrokeShape="RoundRectangle 10" 
                                 StrokeThickness="0" 
                                 Margin="0,0,0,15">
@@ -46,6 +48,7 @@
                                     CommandParameter="{Binding Place.Id}" />
                             </Border.GestureRecognizers>
                             <Grid>
+                                <!-- Background image with dark overlay -->
                                 <Image Source="{Binding Place.Image}" 
                                        Aspect="AspectFill"
                                        ZIndex="2"
@@ -53,6 +56,7 @@
                                        HeightRequest="200" />
                                 <BoxView Color="Black" Opacity="0.3" ZIndex="1" />
 
+                                <!-- "Visited" badge (green badge in top-right) -->
                                 <Border BackgroundColor="#22c55e"
                                         StrokeShape="RoundRectangle 8"
                                         Padding="10,5"
@@ -67,6 +71,7 @@
                                            FontAttributes="Bold" />
                                 </Border>
 
+                                <!-- Place name and short description at bottom -->
                                 <VerticalStackLayout Padding="15" VerticalOptions="End" ZIndex="4">
                                     <Label Text="{Binding Place.Name}" 
                                            FontSize="22" 

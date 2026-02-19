@@ -9,7 +9,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
 
-            <!-- Image -->
+            <!-- Hero image with shadow -->
             <Border StrokeShape="RoundRectangle 10" Padding="0" StrokeThickness="0">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -19,19 +19,20 @@
                        HeightRequest="300" />
             </Border>
 
-            <!-- Content Card -->
+            <!-- Main content card with place details -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
                 </Border.Shadow>
                 <VerticalStackLayout Spacing="15">
-                    <!-- Title -->
+
+                    <!-- Place title -->
                     <Label Text="{Binding Place.Name}"
                            FontSize="28"
                            FontAttributes="Bold"
                            TextColor="#1e3a8a" />
 
-                    <!-- Info -->
+                    <!-- Hours and address (address is tappable) -->
                     <VerticalStackLayout Spacing="10">
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="🕐" FontSize="16" />
@@ -53,7 +54,7 @@
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
 
-                    <!-- Description -->
+                    <!-- Full place description -->
                     <Label Text="{Binding Place.FullDescription}"
                            FontSize="16"
                            LineHeight="1.6"
@@ -61,7 +62,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Visit Checkbox -->
+            <!-- Visited toggle checkbox (tap the whole card) -->
             <Border StrokeShape="RoundRectangle 10" Padding="15" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -79,7 +80,7 @@
                 </HorizontalStackLayout>
             </Border>
 
-            <!-- Back Button -->
+            <!-- Back to home button -->
             <Button Text="Back to home"
                     Command="{Binding BackCommand}"
                     BackgroundColor="White"

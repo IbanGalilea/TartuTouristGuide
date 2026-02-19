@@ -7,7 +7,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
 
-            <!-- Header -->
+            <!-- Page header -->
             <VerticalStackLayout Spacing="10">
                 <HorizontalStackLayout Spacing="15">
                     <Label Text="📚" FontSize="32" />
@@ -22,7 +22,7 @@
                        TextColor="#6b7280" />
             </VerticalStackLayout>
 
-            <!-- Emergency Numbers -->
+            <!-- Emergency numbers section -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -41,7 +41,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Transportation -->
+            <!-- Transportation info section -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -60,7 +60,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Accommodation -->
+            <!-- Accommodation areas section -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -79,7 +79,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Pharmacies & Healthcare -->
+            <!-- Pharmacies and healthcare section -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -98,7 +98,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Supermarkets -->
+            <!-- Supermarkets section -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -117,7 +117,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Must-Visit Places -->
+            <!-- Must-visit landmarks section -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="White">
                 <Border.Shadow>
                     <Shadow Brush="Black" Opacity="0.3" Offset="0,4" Radius="10" />
@@ -137,7 +137,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Tourist Information -->
+            <!-- Tourist info center (highlighted card) -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="#fef3c7">
                 <VerticalStackLayout Spacing="15">
                     <Label Text="ℹ️ Tourist Information Center"
@@ -157,7 +157,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Useful Tips -->
+            <!-- Useful tips section (highlighted card) -->
             <Border StrokeShape="RoundRectangle 10" Padding="20" StrokeThickness="0" BackgroundColor="#eff6ff">
                 <VerticalStackLayout Spacing="15">
                     <Label Text="💡 Useful Tips"
@@ -174,7 +174,7 @@
                 </VerticalStackLayout>
             </Border>
 
-            <!-- Back Button -->
+            <!-- Back to home button -->
             <Button Text="Back to Home"
                     Clicked="OnBackClicked"
                     BackgroundColor="#ef4444"

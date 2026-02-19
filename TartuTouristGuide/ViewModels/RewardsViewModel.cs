@@ -5,6 +5,7 @@ using TartuTouristGuide.Services;
 
 namespace TartuTouristGuide.ViewModels
 {
+    // Represents a reward and its unlock status for display
     public class RewardItem
     {
         public Reward Reward { get; set; } = new Reward();
@@ -13,6 +14,7 @@ namespace TartuTouristGuide.ViewModels
         public double OverlayOpacity { get; set; }
     }
 
+    // ViewModel for the rewards page: shows unlock status of all rewards
     public class RewardsViewModel : BaseViewModel
     {
         private readonly VisitedPlacesService _visitedService;
@@ -50,6 +52,7 @@ namespace TartuTouristGuide.ViewModels
             set => SetProperty(ref _showCompletion, value);
         }
 
+        // Loads all rewards and calculates their unlock status
         public void LoadRewards()
         {
             var rewards = RewardsData.GetRewards();
